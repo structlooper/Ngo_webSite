@@ -29,52 +29,8 @@
          </div>
          <hr>
                 <div class="impact-story"> 
-                            <div id="tplx-donation-form">
-                            
-                              <form method="post" name="frmSample" action="register-submit.asp" onsubmit="return ValidateForm()">
-                                
-                                <div class="form-group clearfix">
-                                  <div class="col-sm-1">
-                                    <input type="radio" class="radio-inline" name="amount_advanced" id="aamount18" value="30000.00" onclick="update_amount('30000.00')">
-                                  </div>
-                                  <label class="col-sm-11 control-label">
-                                  Rs. 30,000/-
-                                  </label>
-                                </div>
-                                <div class="form-group clearfix">
-                                  <div class="col-sm-1">
-                                    <input type="radio" class="radio-inline" name="amount_advanced" id="aamount25" value="18000.00" onclick="update_amount('18000.00')">
-                                  </div>
-                                  <label class="col-sm-11 control-label">
-                                  Rs. 18,000/-
-                                  </label>
-                                </div>
-                                <div class="form-group clearfix">
-                                  <div class="col-sm-1">
-                                    <input type="radio" class="radio-inline" name="amount_advanced" id="aamount50" value="6000.00" checked="checked" onclick="update_amount('6000.00')">
-                                  </div>
-                                  <label class="col-sm-11 control-label">
-                                  Rs. 6,000/-
-                                  </label>
-                                </div>
-                                <div class="form-group clearfix">
-                                  <div class="col-sm-1">
-                                    <input type="radio" name="amount_advanced" id="aamountother" onclick="custom_amount_read()">
-                                  </div>
-                                  <label class="col-sm-11 control-label">
-                                  <span class="col-sm-4 control-label">
-                                  Other amount:
-                                  </span>
-                                  <span class="col-sm-8">
-                                  <input type="text" class="donationTextField1 form-control" name="number" id="number" size="20" maxlength="12" onfocus="custom_amount()" onblur="custom_amount()" border:="" 0px="">
-                                  </span>
-                                  </label>
-                                </div>
-                                <div class="row2">  <input id="submit_amount" type="hidden" name="AMOUNT" value=""></div>
-                                
-                                <input type="hidden" name="Order_Id" value=""> 
-                                <input type="hidden" name="Merchant_Id" value="">
-
+                    <div id="tplx-donation-form">
+                         <form method="post" name="frmSample" action="register-submit.asp" onsubmit="return ValidateForm()">
                                 <div class="form-group clearfix">
                                   <label class="col-sm-3 control-label ">
                                   Name *
@@ -490,6 +446,53 @@
                                     <input type="text" class="donationTextField2 form-control" name="txtpan" id="pan">
                                   </div>
                               </div>
+
+<br>
+                              <div class="row">
+                                  <div class="form-group clearfix">
+                                    <div class="col-lg-2">
+                                      <input type="radio" class="radio-inline" name="amount_advanced" id="aamount18" value="30000.00" onclick="update_amount('30000.00')">
+                                      <label class="col-sm-11 control-label">
+                                        Rs.5,000/-
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group clearfix">
+                                    <div class="col-lg-2">
+                                      <input type="radio" class="radio-inline" name="amount_advanced" id="aamount25" value="18000.00" onclick="update_amount('18000.00')">
+                                      <label class="col-sm-11 control-label">
+                                        Rs.1,000/-
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group clearfix">
+                                    <div class="col-lg-2">
+                                      <input type="radio" class="radio-inline" name="amount_advanced" id="aamount50" value="6000.00" checked="checked" onclick="update_amount('6000.00')">
+                                      <label class="col-sm-11 control-label">
+                                        Rs.500/-
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="form-group clearfix">
+                                    <div class="col-sm-1">
+                                      <input type="radio" name="amount_advanced" id="aamountother" onclick="custom_amount_read()">
+                                    </div>
+                                    <label class="col-sm-11 control-label">
+                                    <span class="col-sm-4 control-label">
+                                    Other amount:
+                                    </span>
+                                    <span class="col-sm-8">
+                                    <input type="text" class="donationTextField1 form-control" name="number" id="number" size="20" maxlength="12" onfocus="custom_amount()" onblur="custom_amount()" border:="" 0px="">
+                                    </span>
+                                    </label>
+                                  </div>
+                                  <div class="row2">  <input id="submit_amount" type="hidden" name="AMOUNT" value=""></div>
+                                  
+                                  <input type="hidden" name="Order_Id" value=""> 
+                                  <input type="hidden" name="Merchant_Id" value="">
+
                              <div class="col-sm-12 padd">
                                  <input type="submit" value="Donate Now" class="btn btn-warning" name="" onclick="return validate_form()" id="tplx-donation-btn">
                              </div>

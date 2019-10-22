@@ -32,7 +32,7 @@
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-          <li class="active ">
+          <li class=" ">
             <a href="#">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
@@ -74,7 +74,7 @@
               <p>Typography</p>
             </a>
           </li>
-          <li class="active-pro">
+          <li class="-pro">
             <a href="./upgrade.html">
               <i class="now-ui-icons arrows-1_cloud-download-93"></i>
               <p>Upgrade to PRO</p>
@@ -104,7 +104,7 @@
             <span class="navbar-toggler-bar navbar-kebab"></span>
             <span class="navbar-toggler-bar navbar-kebab"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+          <div class="collapse navbar-collapse justify-content-end " id="navigation">
             <form>
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
@@ -116,16 +116,16 @@
               </div>
             </form>
             
-            <ul class="navbar-nav">
-              <li class="nav-item">
+            <ul class="navbar-nav ">
+              <li class="nav-item ">
                 <a class="nav-link" href="#">
                   <i class="now-ui-icons media-2_sound-wave"></i>
                   <p>
-                    <span class="d-lg-none d-md-block">Stats</span>
+                    <span class="d-lg-none d-md-block ">Stats</span>
                   </p>
                 </a>
               </li>
-              <li class="nav-item dropdown border-left pr-5">
+              <li class="nav-item dropdown border-left  pr-5">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     <i class="now-ui-icons users_single-02" ></i>
                       {{ Auth::user()->name }} 

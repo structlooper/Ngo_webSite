@@ -24,19 +24,19 @@
           </ol>
               <div class="carousel-inner">
                   <div class="carousel-item">
-                    <img src="images/img1.jpg" class="d-block w-100" alt="First slide" width='1146px' height='550px'>
+                    <img src="images/img1.jpg" class="d-block w-100" alt="First slide" width='1146px' height='450px'>
                       <div class="carousel-caption d-none d-md-block bg-transparent text-dark">
                         <h5>Information about image</h5>
                       </div>
                   </div>
               <div class="carousel-item">
-                  <img src="images/img4.png" class="d-block w-100" alt="Second slide" width='1146px' height='550px'>
+                  <img src="images/img4.png" class="d-block w-100" alt="Second slide" width='1146px' height='450px'>
                   <div class="carousel-caption d-none d-md-block bg-transparent text-dark">
                     <h5>Information about image_2</h5>
                   </div>
               </div>
               <div class="carousel-item active">
-                    <img src="images/img3.jpg" class="d-block w-100" alt="Third slide" width='1146px' height='550px'>
+                    <img src="images/img3.jpg" class="d-block w-100" alt="Third slide" width='1146px' height='450px'>
                     <div class="carousel-caption d-none d-md-block bg-transparent text-dark">
                       <h5>Information about image_3</h5>
                     </div>
