@@ -1,6 +1,6 @@
 @yield('footer_str')
 <!-- Footer -->
-<div class='bg-dark '>
+<div class=' border border-dark ml-1 border-bottom-0 rounded text-dark' style="background-color:pink;  ">
         <footer class="page-footer font-small stylish-color-light pt-4">
 
           <!-- Footer Links -->
@@ -100,7 +100,7 @@
           <!-- Call to action -->
           <ul class="list-unstyled list-inline text-center py-2 ">
             <li class="list-inline-item">
-              <h5 class="mb-1 text-light">Support us!</h5>
+              <h5 class="mb-1 ">Support us!</h5>
             </li>
             <li class="list-inline-item">
               <a href="/donate" class="btn btn-success btn-rounded">Donate us</a>
@@ -113,8 +113,8 @@
           
 
           <!-- Copyright -->
-          <div class="footer-copyright text-center py-3 text-light">© 2018 Copyright:<br><I>ngo_name</I>@
-            <a href="/" class="text-success">NGO_NAME.com</a>
+          <div class="footer-copyright text-center py-3 ">© 2018 Copyright:<br><I>ngo_name</I>@
+            <a href="/" class="text-secondary">NGO_NAME.com</a>
           </div>
 </div>
 <!-- Optional JavaScript -->
