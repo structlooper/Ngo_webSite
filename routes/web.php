@@ -41,3 +41,4 @@ Auth::routes();
 
 Route::any('/dashboard', 'DashboardController@index')->name("dashboard");
 
+Route::post('/donating', 'DonateController@store')->name('donating');
