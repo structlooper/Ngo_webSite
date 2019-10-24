@@ -16,6 +16,7 @@ class CreateDonatesTable extends Migration
         Schema::create('donates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('pay_id')->unique();
+           
             $table->string('name');
             $table->string('email');
             $table->integer('phone');
