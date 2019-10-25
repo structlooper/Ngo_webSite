@@ -107,7 +107,7 @@
                                       Other amount:
                                     </span>
                                     <span class="col-sm-8">
-                                      <input type="text" class="donationTextField1 form-control" name="amountPayment" id="idtxt" size="20" maxlength="12" disabled="disabled"  >
+                                      <input type="number" class="donationTextField1 form-control" name="amountPayment" id="idtxt" size="20" maxlength="12" disabled="disabled"  >
                                     </span>
                                   </label>
                                 </div>
