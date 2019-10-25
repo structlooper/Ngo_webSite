@@ -52,11 +52,12 @@ class DonateController extends Controller
         $data_for_request = $this->handlePaytmRequest($pay_id, $donate->price);
 
         
+        // $paytm_txn_url = 'https://securegw-stage.paytm.in/theia/processTransaction';
         $paytm_txn_url = 'https://securegw-stage.paytm.in/theia/processTransaction';
 	    $paramList = $data_for_request['paramList'];
 	    $checkSum = $data_for_request['checkSum'];
 
-        return view( 'paytm-merchant-form', compact( 'paytm_txn_url', 'paramList', 'checkSum' ) );
+        return view( 'donation.paytm-merchant-form', compact( 'paytm_txn_url', 'paramList', 'checkSum' ) );
     
     }
     public function handlePaytmRequest( $order_id, $amount ) {
@@ -66,7 +67,7 @@ class DonateController extends Controller
 		$checkSum = "";
 		$paramList = array();
 		// Create an array having all required parameters for creating checksum.
-		$paramList["MID"] = 'Websit5739737375544';                             //the data whic have been give by your self from mail 
+		$paramList["MID"] = 'DIY12386817555501617';                             //the data whic have been give by your self from mail 
 		$paramList["ORDER_ID"] = $order_id;                                    //the data whic have been give by your self from mail         
 		$paramList["CUST_ID"] = $order_id;                                     //the data whic have been give by your self from mail        
 		$paramList["INDUSTRY_TYPE_ID"] = 'Retail';                             //the data whic have been give by your self from mail 
@@ -74,7 +75,7 @@ class DonateController extends Controller
 		$paramList["TXN_AMOUNT"] = $amount;                                    //the data whic have been give by your self from mail     
 		$paramList["WEBSITE"] = 'WEBSTAGING';                                  //the data whic have been give by your self from mail     
 		$paramList["CALLBACK_URL"] = url( '/paytm-callback' );                 //the data whic have been give by your self from mail 
-		$paytm_merchant_key = '31Q9BhP79JVip77';                               //the data whic have been give by your self from mail     
+		$paytm_merchant_key = 'bKMfNxPPf_QdZppa';                               //the data whic have been give by your self from mail     
 		//Here checksum string will return by getChecksumFromArray() function.  
 		$checkSum = getChecksumFromArray( $paramList, $paytm_merchant_key );    
 		return array(
@@ -368,8 +369,8 @@ class DonateController extends Controller
  */
     public function getConfigPaytmSettings() {
             define('PAYTM_ENVIRONMENT', 'TEST'); // PROD
-            define('PAYTM_MERCHANT_KEY', '31Q9BhP79JVip77'); //Change this constant's value with Merchant key downloaded from portal
-            define('PAYTM_MERCHANT_MID', 'Websit5239737375544'); //Change this constant's value with MID (Merchant ID) received from Paytm
+            define('PAYTM_MERCHANT_KEY', ' bKMfNxPPf_QdZppa'); //Change this constant's value with Merchant key downloaded from portal
+            define('PAYTM_MERCHANT_MID', ' DIY12386817555501617'); //Change this constant's value with MID (Merchant ID) received from Paytm
             define('PAYTM_MERCHANT_WEBSITE', 'WEBSTAGING'); //Change this constant's value with Website name received from Paytm
             $PAYTM_STATUS_QUERY_NEW_URL='https://securegw-stage.paytm.in/merchant-status/getTxnStatus';
             $PAYTM_TXN_URL='https://securegw-stage.paytm.in/theia/processTransaction';
@@ -384,17 +385,19 @@ class DonateController extends Controller
          }
 
     public function paytmCallback( Request $request )  {
-        $order_id = $request['ORDERID'];
+        // return $request;
+        // make sure you can wrigistered in verifyCSRFToken.php in middleware. now
+        $pay_id = $request['ORDERID'];
 
         if ( 'TXN_SUCCESS' === $request['STATUS'] ) {
             $transaction_id = $request['TXNID'];
-            $order = Order::where( 'pay_id', $pay_id )->first();
-            $order->status = 'complete';
-            $order->transaction_id = $transaction_id;
-            $order->save();
-            return view( 'order-complete', compact( 'order', 'status' ) );
+            $donate = Donate::where( 'pay_id', $pay_id )->first();
+            $donate->status = 'complete';
+            $donate->transaction_id = $transaction_id;
+            $donate->save();
+            return view( 'donation.donation_complete', compact( 'donate', 'status' ) );
             } else if( 'TXN_FAILURE' === $request['STATUS'] ){
-            return view( 'payment-failed' );
+            return view( 'donation.payment-failed' );
         }
     }
 }
