@@ -40,7 +40,13 @@ Route::get('/our_works/women_enpowerment','OurWorkController@women');
 Auth::routes();
 
 
-Route::any('/dashboard', 'DashboardController@index')->name("dashboard");
+// Route::any('/dashboard', 'DashboardController@index')->name("dashboard");
+
 
 Route::post('/donating', 'DonateController@store')->name('donating');
 Route::post('/paytm-callback','DonateController@paytmCallback');
+Route::group(['middleware' => ['auth','Admin']], function () {
+    
+    Route::any('/dashboard', 'DashboardController@index')->name("dashboard");
+    
+ });
