@@ -31,7 +31,7 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li class=" ">
-            <a href="#">
+            <a href="http://127.0.0.1:8000/dashboard">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>
@@ -40,9 +40,16 @@
               <h5>Site Contents</h5>      
           </li>             
           <li>
-            <a href="#">
+            <a href="/homepageEdit">
               <i class="now-ui-icons business_bulb-63"></i>
               <p>Home Page Edit</p>
+            </a>
+          </li>
+          <li>
+          <li>
+            <a href="/aboutusEdit">
+              <i class="now-ui-icons ui-2_like"></i>
+              <p>About us Edit</p>
             </a>
           </li>
           <li>
@@ -67,7 +74,7 @@
                 <h5>profiles</h5>      
               </li>
           <li>
-            <a href="./user.html">
+            <a href="/profiles">
               <i class="now-ui-icons users_single-02"></i>
               <p>Admin Profiles list</p>
             </a>
@@ -89,7 +96,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#">Dashboard</a>
+            <a class="navbar-brand" href="http://127.0.0.1:8000/dashboard">Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
