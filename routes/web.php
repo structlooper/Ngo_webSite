@@ -18,6 +18,7 @@ Route::get('/contactUs','IndexController@contact')->name('contact_us');
 
 // about_us......
 Route::get('/aboutus/who_we_are','AboutController@about_us');
+Route::get('/aboutus','AboutController@about_us');
 
 Route::get('/aboutus/team','AboutController@team');
 
@@ -32,9 +33,9 @@ Route::get('/our_works/education','OurWorkController@education');
 Route::get('/our_works/health','OurWorkController@health');
 Route::get('/our_works/women_enpowerment','OurWorkController@women');
 
-Route::get('/home', function (){
-    return view('welcome');
-});
+// Route::get('/home', function (){
+//     return view('welcome');
+// });
 
 Auth::routes();
 
