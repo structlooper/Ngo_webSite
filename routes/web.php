@@ -48,5 +48,6 @@ Route::post('/paytm-callback','DonateController@paytmCallback');
 Route::group(['middleware' => ['auth','Admin']], function () {
     
     Route::any('/dashboard', 'DashboardController@index')->name("dashboard");
-    
+    Route::get('/profiles','DashboardController@profiles');
+    Route::get('/aboutusEdit','DashboardController@aboutUs');
  });
