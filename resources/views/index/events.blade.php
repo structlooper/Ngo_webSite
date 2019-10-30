@@ -1,19 +1,16 @@
-
-@extends('layouts.header')
+<!-- Header BAR..................................... -->
 @extends('layouts.footer')
 @extends('layouts.nav')
 
-@section('footer_str')
-@section('nav_bar')
-@endsection('nav_bar')
-@section('header_str')
+@section('title_str')
+    Events
+@endsection
 
-@endsection('header_str')
 
-<title> Events</title>
-<br>
-<!-- body of page................ -->
-    <div class='container '>
+
+@section('content_str')
+<div class="content">
+  <div class='container '>
         <div class='row'>
     <h3 class='display-4 bg-warning rounded'>Current events</h3>
         <div class='col-lg-auto border  ml-auto mt-auto pt-2 '>
@@ -63,11 +60,11 @@
        </div>
        </div>
    </div>
-   </div>
-   <hr>
- <div class="container">
-   <div class="row">
-   <h3 class='display-4 bg-warning rounded'>Upcoming events</h3>
+  </div>
+        <hr>
+  <div class="container">
+    <div class="row">
+     <h3 class='display-4 bg-warning rounded'>Upcoming events</h3>
     <div class="col-lg-12 border">
                 <table class="table ">
             <thead class="bg-dark text-white">
@@ -102,9 +99,9 @@
 
     </div>
    </div>
-</div>  
-<hr>
-<div class="container">
+    </div>  
+        <hr>
+    <div class="container">
    <div class="row">
    <h3 class='display-4 bg-warning rounded'>Past events</h3>
     <div class="col-lg-12 border">
@@ -141,9 +138,19 @@
 
     </div>
    </div>
-</div> 
+    </div> 
+</div>
+<hr>
+@endsection
 
-<div class='mt-2'>@endsection('footer_str')</div>
-  
+
+
+
+
+
 
  
+
+@section('footer_str')
+
+@endsection

@@ -29,20 +29,22 @@
 <style>
 
 
-  .dropdown:hover>.dropdown-menu {
-  display: block;
-}
+        .dropdown:hover>.dropdown-menu {
+        display: block;
+        }
 
-.dropdown>.dropdown-toggle:active {
-  /*Without this, clicking will make it sticky*/
-    pointer-events: none;
-}
-body{
-    background-color: rgba(32, 58, 80, 0.72);   
-}
+        .dropdown>.dropdown-toggle:active {
+        /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+        body{
+            background-color: rgba(32, 58, 80, 0.72);   
+        }
 </style>
 
-
+<title>
+    @yield('title_str')
+</title>
 </head>
 <body>
     
@@ -149,4 +151,9 @@ body{
    
   
 <hr>
-  @yield('nav_str')
+<div class="content">
+
+    @yield('content_str')
+</div>
+</body>
+</html>
