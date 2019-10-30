@@ -1,7 +1,7 @@
 @yield('header_str')
      
 
-{{-- 
+
     <div class='border-bottom-0 bg-dark'>
 
 
@@ -12,5 +12,4 @@
     </form>
 
     </div>
-  </body>
-</html> --}}
+ 
