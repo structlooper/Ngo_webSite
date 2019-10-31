@@ -18,10 +18,5 @@ class DashboardController extends Controller
         return view('admin.adminProfile')->with('users',$user);
         
     }
-    public function aboutUs()
-    {
-        $user = User::all();
-        return view('admin.aboutEdit');
-        
-    }
+    
 }
