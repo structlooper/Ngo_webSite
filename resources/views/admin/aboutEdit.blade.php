@@ -6,9 +6,9 @@
 @endsection
 
 @section('content')
-<div class="container">
-    <h1 class="display-4 border bg-secondary text-light pl-2">Who we are : {portion}</h1>
-    <div class="container border rounded pt-2">
+      <div class="container">
+          <h1 class="display-4 border bg-secondary text-light pl-2">Who we are : {portion}</h1>
+          <div class="container border rounded pt-2">
             <form method="post"  action="{{ route('aboutSave')}}" enctype="multipart/form-data" >
                     @csrf
                     <div class="form-group clearfix">
@@ -16,7 +16,7 @@
                         Heading 
                       </label>
                       <div class="col-sm-9">
-                        <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"   autofocus name="heading" >
+                        <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"    name="heading" >
                       </div>
                     </div>
                     <br>
@@ -28,11 +28,12 @@
                         <textarea name="content" id="cnt1" class=" summernote "></textarea>
                       </div>
                     </div>
-                    <div class="">
+                    <br>
+                    <div class="col-sm-3 control-label border">
                       <label for="">upload image</label>
                       <div class="col-sm-9 ml-2">
                         <input type="file" name="image" />
-                        <label class=""> Select a file to upload</label> <br>
+                        <label class="">Select a file to upload</label> <br>
                         
                             
                       </div>
@@ -42,22 +43,25 @@
                       </div>
             </form>
         </div>
-    </div>
+      </div>
+        <br>
+        <br>
+    
 
 
     
 @endsection
 
 @section('scripts')
-    <script>
+<script>
 
-$(document).ready(function() {
-  $('.summernote').summernote({
-    
-    tabsize: 3,
-    height: 100
-  });
-});   
+      $(document).ready(function() {
+        $('.summernote').summernote({
+          
+          tabsize: 3,
+          height: 100
+        });
+      });   
    
 </script>
 @endsection

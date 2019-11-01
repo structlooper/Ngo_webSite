@@ -49,7 +49,11 @@ Route::group(['middleware' => ['auth','Admin']], function () {
     
     Route::any('/dashboard', 'DashboardController@index')->name("dashboard");
     Route::get('/profiles','DashboardController@profiles');
+    
     Route::get('/aboutusEdit','AboutEditWhoWeAreController@index');
     Route::post('/aboutSave','AboutEditWhoWeAreController@store')->name('aboutSave');
+    
+    Route::get('/aboutusEditTeam','AboutTeamEditController@index_1');
+    Route::post('/slideData','AboutTeamEditController@store_slide_data')->name('SaveData');
 
 });
