@@ -38,7 +38,7 @@ class AboutEditWhoWeAreController extends Controller
 
         $who_we_are->save();
         
-        return view('admin.aboutEdit')->with('who_we_are',$who_we_are);
+         return redirect('/aboutusEdit');
             
     }
 }

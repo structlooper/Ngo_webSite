@@ -16,7 +16,7 @@
                         Heading 
                       </label>
                       <div class="col-sm-9">
-                        <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 30 char" maxlength="30"   autofocus name="heading" >
+                        <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"   autofocus name="heading" >
                       </div>
                     </div>
                     <br>
