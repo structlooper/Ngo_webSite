@@ -1,4 +1,4 @@
-<!-- Header BAR..................................... -->
+
 @extends('layouts.footer')
 @extends('layouts.nav')
 
@@ -40,9 +40,9 @@
                 </div>
               </div>
               <hr>
-              @endif
-              @endforeach
-              @endsection
+    @endif
+    @endforeach
+    @endsection
               
 
 

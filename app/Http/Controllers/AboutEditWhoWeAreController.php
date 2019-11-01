@@ -14,12 +14,12 @@ class AboutEditWhoWeAreController extends Controller
         return view('admin.aboutEdit');
         
     }
-
+    
     public function store(Request $request)
     {
         $who_we_are = new AboutEditWhoWeAre();
         
-
+        
         $who_we_are->heading = $request->input('heading');
         $who_we_are->content = $request->input('content');
         
@@ -29,16 +29,18 @@ class AboutEditWhoWeAreController extends Controller
             $filename =  uniqid() . '.' . $extension;
             $file->move('uploades/aboutus/who_we_are/', $filename);
             $who_we_are->image = $filename;
-        
+            
         }
         else {
             return $request;
             $who_we_are->image = '';
         }
-
+        
         $who_we_are->save();
         
-         return redirect('/aboutusEdit');
-            
+        return redirect('/aboutusEdit');
+        
     }
+    
+
 }

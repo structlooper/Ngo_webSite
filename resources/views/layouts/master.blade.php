@@ -34,7 +34,7 @@
           <li class=" ">
             <a href="http://127.0.0.1:8000/dashboard">
               <i class="now-ui-icons design_app"></i>
-              <p>Dashboard</p>
+              <b>Dashboard</b>
             </a>
           </li>
           <li class="ml-4 text-success border-bottom">
@@ -43,32 +43,40 @@
           <li>
             <a href="/homepageEdit">
               <i class="now-ui-icons business_bulb-63"></i>
-              <p>Home Page Edit</p>
+              <b>Home Page Edit</b>
             </a>
           </li>
           <li>
           <li>
+            <label for="" class="ml-4 text-white"><b> About us Edit</b>
             <a href="/aboutusEdit">
               <i class="now-ui-icons ui-2_like"></i>
-              <p>About us Edit</p>
+              <p class="text-white">Who_we_are</p>
             </a>
+            <a href="/aboutusEditTeam">
+              {{-- <i class="now-ui-icons ui-2_like"></i> --}}
+              <p class="ml-5 text-white">Our_Team</p>
+            </a>
+          </label>
           </li>
           <li>
             <a href="./map.html">
               <i class="now-ui-icons design-2_ruler-pencil"></i>
-              <p>Events Edit</p>
+              <b>Events Edit</b>
             </a>
           </li>
           <li>
+            <label class="ml-4 text-white" ><b>Our works edit</b>
             <a href="./notifications.html">
               <i class="now-ui-icons ui-2_settings-90"></i>
-              <p>Our works edit</p>
+              <p class="text-white">test events</p>
             </a>
+          </label>
           </li>
           <li>
               <a href="./notifications.html">
                 <i class="now-ui-icons ui-1_email-85"></i>
-                <p>Contact us edit</p>
+                <b>Contact us edit</b>
               </a>
             </li>
             <li class="ml-4 text-success border-bottom">
@@ -77,7 +85,7 @@
           <li>
             <a href="/profiles">
               <i class="now-ui-icons users_single-02"></i>
-              <p>Admin Profiles list</p>
+              <b>Admin Profiles list</b>
             </a>
           </li> 
         </ul>
