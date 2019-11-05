@@ -38,7 +38,7 @@
         </div>
         <br>
         <div class="container border rounded pt-2">
-            <form method="post"  action="{{ route('aboutSave')}}" enctype="multipart/form-data" >
+            <form method="post"  action="{{ route('SaveNewDeaprtment')}}" enctype="multipart/form-data" >
               @csrf
               <h2>Add new department</h2>
              
