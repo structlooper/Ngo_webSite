@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 
-use App\new_department_name;
+
+
+use App\add_team_data;
 use Illuminate\Http\Request;
 use App\about_team_slide_data;
 
@@ -40,12 +42,33 @@ class AboutTeamEditController extends Controller
         return redirect('/aboutusEditTeam');
         
     }
-    public function new_department_name(request $request)
+    public function add_member_department(request $request)
     {
-        $new_department_name = new new_department_name();
-        $new_department_name->department_name = ($request->new_department_name) ? $request->new_department_name : '';
-        $new_department_name->save();
-        return view('admin.aboutEditTeam');
+        
+        $team_data = new add_team_data();
+        if ($request->hasfile('member_picture')) {
+            $file = $request->file('member_picture');
+            $extension = $file->getClientOriginalExtension(); //geting extension from image Extension
+            $filename =  uniqid() . '.' . $extension;
+            $file->move('uploades/aboutus/team/memberImage', $filename);
+            $team_data->image = $filename;
+            
+            $team_data->department_name = $request->input('department_name');
+            $team_data->member_name = $request->input('member_name');         
+            $team_data->member_email = $request->input('member_email'); 
+            $team_data->member_more_details = $request->input('member_more_details');
+            $team_data->save();
+            
+            return redirect('/aboutusEditTeam');
+            
+        }
+        else {
+            return $request;
+            $team_data->image = '';
+        }
+        
+        
         
     }
+    
 }

@@ -44,6 +44,7 @@ Auth::routes();
 
 Route::post('/donating', 'DonateController@store')->name('donating');
 Route::post('/paytm-callback','DonateController@paytmCallback');
+
 Route::group(['middleware' => ['auth','Admin']], function () {
     
     Route::any('/dashboard', 'DashboardController@index')->name("dashboard");
@@ -54,6 +55,6 @@ Route::group(['middleware' => ['auth','Admin']], function () {
     
     Route::get('/aboutusEditTeam','AboutTeamEditController@index_1');
     Route::post('/slideData','AboutTeamEditController@store_slide_data')->name('SaveData');
-    Route::post('/newDepartment','AboutTeamEditController@new_department_name')->name('SaveNewDeaprtment');
+    Route::post('/departmentMember','AboutTeamEditController@add_member_department')->name('SaveDeaprtmentMember');
 
 });
