@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use App\User;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 
 class AdminMiddleware
@@ -20,10 +20,8 @@ class AdminMiddleware
         return $next($request);
         if(Auth::User()->usertype == "admin") 
         {
-            return "dashboard";
+            return "/dashboard";
         }
-        else{
-            return redirect('/index');
-        }
+       
     }
 }

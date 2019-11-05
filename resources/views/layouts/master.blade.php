@@ -7,7 +7,7 @@
    <link rel="icon" type="image/png" href="../assets/img/favicon.png"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Admin | Dashboard
+    Admin | @yield('title_das_str')
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -16,8 +16,8 @@
   <!-- CSS Files -->
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../assets/css/now-ui-dashboard.css?v=1.3.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  
+  
 </head>
 
 <body class="">
@@ -27,59 +27,67 @@
     <div class="sidebar bg-info" data-color="">
       <!--Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"-->
       <div class="logo  ">
-        <a href="/"><img src="/icons/lgo.png" alt="not found" width="50px" height="50px"><div class="container text-light">
-                Charity</div></a>
+        <a href="/"><img src="/icons/lgo.png" alt="not found" width="50px" height="50px"><span class='ml-2 display-4 text-white'>charity</span></a>
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li class=" ">
-            <a href="#">
+            <a href="http://127.0.0.1:8000/dashboard">
               <i class="now-ui-icons design_app"></i>
-              <p>Dashboard</p>
+              <b>Dashboard</b>
+            </a>
+          </li>
+          <li class="ml-4 text-success border-bottom">
+              <h5>Site Contents</h5>      
+          </li>             
+          <li>
+            <a href="/homepageEdit">
+              <i class="now-ui-icons business_bulb-63"></i>
+              <b>Home Page Edit</b>
             </a>
           </li>
           <li>
-            <a href="./icons.html">
-              <i class="now-ui-icons education_atom"></i>
-              <p>Icons</p>
+          <li>
+            <label for="" class="ml-4 text-white"><b> About us Edit</b>
+            <a href="/aboutusEdit">
+              <i class="now-ui-icons ui-2_like"></i>
+              <p class="text-white">Who_we_are</p>
             </a>
+            <a href="/aboutusEditTeam">
+              {{-- <i class="now-ui-icons ui-2_like"></i> --}}
+              <p class="ml-5 text-white">Our_Team</p>
+            </a>
+          </label>
           </li>
           <li>
             <a href="./map.html">
-              <i class="now-ui-icons location_map-big"></i>
-              <p>Maps</p>
+              <i class="now-ui-icons design-2_ruler-pencil"></i>
+              <b>Events Edit</b>
             </a>
           </li>
           <li>
+            <label class="ml-4 text-white" ><b>Our works edit</b>
             <a href="./notifications.html">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Notifications</p>
+              <i class="now-ui-icons ui-2_settings-90"></i>
+              <p class="text-white">test events</p>
             </a>
+          </label>
           </li>
           <li>
-            <a href="./user.html">
+              <a href="./notifications.html">
+                <i class="now-ui-icons ui-1_email-85"></i>
+                <b>Contact us edit</b>
+              </a>
+            </li>
+            <li class="ml-4 text-success border-bottom">
+                <h5>profiles</h5>      
+              </li>
+          <li>
+            <a href="/profiles">
               <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
+              <b>Admin Profiles list</b>
             </a>
-          </li>
-          <li>
-            <a href="./tables.html">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Table List</p>
-            </a>
-          </li>
-          <li>
-            <a href="./typography.html">
-              <i class="now-ui-icons text_caps-small"></i>
-              <p>Typography</p>
-            </a>
-          </li>
-          <li class="-pro">
-            <a href="./upgrade.html">
-              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-              <p>Upgrade to PRO</p>
-            </a>
-          </li>
+          </li> 
         </ul>
       </div>
     </div>
@@ -97,7 +105,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Dashboard</a>
+            <a class="navbar-brand" href="http://127.0.0.1:8000/dashboard">Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -117,14 +125,6 @@
             </form>
             
             <ul class="navbar-nav ">
-              <li class="nav-item ">
-                <a class="nav-link" href="#">
-                  <i class="now-ui-icons media-2_sound-wave"></i>
-                  <p>
-                    <span class="d-lg-none d-md-block ">Stats</span>
-                  </p>
-                </a>
-              </li>
               <li class="nav-item dropdown border-left  pr-5">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     <i class="now-ui-icons users_single-02" ></i>
@@ -132,16 +132,17 @@
                   </a>
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                           <a class="dropdown-item" href="{{ route('dashboard') }}"
-                          >
+                          ><i class="now-ui-icons design_app"></i>
                               {{ __('Dashboard') }}
                           </a>
                           <a class="dropdown-item" href="{{ route('index') }}"
-                          >
+                          ><i class="now-ui-icons business_bulb-63"></i>
                               {{ __('View Home') }}
                           </a>
                       <a class="dropdown-item" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
                                       document.getElementById('logout-form').submit();">
+                                      <i class="now-ui-icons media-1_button-power"></i>
                           {{ __('Logout') }}
                       </a>
                       
@@ -169,32 +170,13 @@
       
       <footer class="footer">
         <div class="container-fluid">
-          <nav>
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="http://presentation.creative-tim.com">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </nav>
           <div class="copyright" id="copyright">
             &copy;
             <script>
               document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
-            </script>, Designed by
-            <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+            </script>, Designed & . Coded by
+            <a href="#ourwebsite" target="_blank">TarKuli Pvt. ltd</a>
+           
           </div>
         </div>
       </footer>
@@ -205,24 +187,17 @@
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <!-- Chart JS -->
-  <script src="../assets/js/plugins/chartjs.min.js"></script>
-  <!--  Notifications Plugin    -->
-  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+ 
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
-  <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script>
-   @yield('scripts')
- <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      demo.initDashboardPageCharts();
+  <!-- include summernote css/js -->
+  <title>Summernote Lite</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
 
-    });
-  </script>
+   @yield('scripts')
+ 
 </body>
 
 </html>
