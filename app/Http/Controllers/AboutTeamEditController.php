@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\AboutEditTeamSlide;
 use Illuminate\Http\Request;
+use App\about_team_slide_data;
 
 class AboutTeamEditController extends Controller
 {
@@ -15,7 +16,7 @@ class AboutTeamEditController extends Controller
     }
     public function store_slide_data(Request $request)
     {
-        $about_team_side_data = new AboutEditTeamSlide();
+        $about_team_side_data = new about_team_slide_data();
         
         
         $about_team_side_data->slide_details = $request->input('slide_detail');

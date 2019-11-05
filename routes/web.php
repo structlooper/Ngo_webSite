@@ -40,7 +40,6 @@ Route::get('/our_works/women_enpowerment','OurWorkController@women');
 Auth::routes();
 
 
-// Route::any('/dashboard', 'DashboardController@index')->name("dashboard");
 
 
 Route::post('/donating', 'DonateController@store')->name('donating');
