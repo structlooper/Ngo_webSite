@@ -37,34 +37,16 @@
             </form>
         </div>
         <br>
-        <div class="container border rounded pt-2">
-            <form method="post"  action="{{ route('SaveNewDeaprtment')}}" enctype="multipart/form-data" >
-              @csrf
-              <h2>Add new department</h2>
-             
-                  <div class="form-group clearfix">
-                    <label class="col-sm-3 control-label ">
-                      Department Name
-                    </label>
-                    <div class="col-sm-9">
-                      <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"    name='new_department_name' >
-                    </div>
-                  </div>
-                  <br>
-                    <div class="col-sm-12 padd">
-                      <input type="submit" value="Save Now" class="btn btn-warning btn-lg" name=""  id="tplx-donation-btn">
-                    </div>
-            </form>
-        </div>
+       
         <br>
         <div class="container border rounded pt-2">
-            <form method="post"  action="{{ route('aboutSave')}}" enctype="multipart/form-data" >
+            <form method="post"  action="{{ route('SaveDeaprtmentMember')}}" enctype="multipart/form-data" >
                     @csrf
-                    <h2>Add members in existing department</h2>
+                    <h2>Team Details</h2>
                     <div class="col-sm-3 control-label border">
                       <label for="">upload image</label>
                       <div class="col-sm-9 ml-2">
-                        <input type="file" name="slide_image" />
+                        <input type="file" name="member_picture" />
                         <label class="">Select a file to upload</label> <br>                               
                       </div>
                     </div>
