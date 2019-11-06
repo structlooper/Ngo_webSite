@@ -57,4 +57,8 @@ Route::group(['middleware' => ['auth','Admin']], function () {
     Route::post('/slideData','AboutTeamEditController@store_slide_data')->name('SaveData');
     Route::post('/departmentMember','AboutTeamEditController@add_member_department')->name('SaveDeaprtmentMember');
 
+    Route::get('/ourWorksEducationEdit','OurWorkEditController@Education');
+    Route::get('/ourWorksHealthEdit','OurWorkEditController@Health');
+
+
 });
