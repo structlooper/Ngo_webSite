@@ -175,4 +175,11 @@ class OurWorkEditController extends Controller
             
             return redirect('/ourWorksHealthEdit');
         }
+    
+
+    public function womenEnpowerment(){
+
+    return view('admin.ourWorkWomenEnpowermentEdit');
+        
+    }
 }
