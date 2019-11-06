@@ -13,8 +13,6 @@ class OurWorkController extends Controller
     public function health(){
         return view('ourworks.health');
      }
-    public function women(){
-        return view('ourworks.women_enporment');
-     }
+   
 
 }
