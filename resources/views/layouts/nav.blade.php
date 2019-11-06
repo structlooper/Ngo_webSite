@@ -98,9 +98,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="/our_works/health">Health</a> 
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="/our_works/women_enpowerment">Women Enpowerment</a>
-                                        </li>
+                                        
                                     </ul>
                                 </li>  
                                 <li class="nav-item"><a class="nav-link text-dark" href="/contactUs">Contact us</a></li>
