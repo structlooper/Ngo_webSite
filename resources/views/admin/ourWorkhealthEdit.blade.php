@@ -25,7 +25,7 @@
                                     Slide image details
                                   </label>
                                   <div class="col-sm-9">
-                                    <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"    name='slide_detail' >
+                                    <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"    name='content' >
                                   </div>
                                 </div>
                                 <br>
