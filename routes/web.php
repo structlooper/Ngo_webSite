@@ -31,6 +31,7 @@ Route::get('/events','EventsController@index');
 
 Route::get('/our_works/education','OurWorkController@education');
 Route::get('/our_works/health','OurWorkController@health');
+Route::get('/our_works/WomenEnpowerment','OurWorkController@women');
 
 
 // Route::get('/home', function (){
@@ -70,5 +71,10 @@ Route::group(['middleware' => ['auth','Admin']], function () {
     Route::post('/healthSlideSave','OurWorkEditController@healthSlideSave')->name('healthSlideSave');
     Route::post('/healthSideDataSave','OurWorkEditController@healthSideDataSave')->name('healthSideDataSave');
     Route::post('/healthSpecificWorkSave','OurWorkEditController@healthSpecificWorkSave')->name('healthSpecificWorkSave');
+    
+    Route::get('/ourWorksWomenEnpowermentEdit','OurWorkEditController@womenEnpowerment');
+
+
+
     
 });
