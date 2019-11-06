@@ -3,14 +3,14 @@
 @extends('layouts.nav')
 
 @section('title_str')
-Women empowerment | she can do everything
+Women Enpowerment | she can do everything
 @endsection
 
 
 
 @section('content_str')
 <div class="content">
-        <div class="container-fluid ">
+          <div class="container-fluid ">
                 <div id="carouselExampleControls" class="carousel slide rounded" data-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -34,11 +34,11 @@ Women empowerment | she can do everything
               </div>
           </div>
           <hr>
-          <div style="background-color: rgb(179, 207, 228);">
+          <div class='bg-secondary text-light'>
                 <div class='container py-2 ' >
                       <div class="row featurette">
                           <div class="col-md-7">
-                            <h2 class="featurette-heading"><u>Women(she can do everything)</u></h2><span class="text-muted">for women, our promise</span>
+                            <h2 class="featurette-heading"><u>Women Enpowerment</u></h2><span class="text">for women, our promise</span>
                             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
                           </div>
                           <div class="col-md-5">
@@ -48,9 +48,9 @@ Women empowerment | she can do everything
                 </div>
           </div>
           <hr>
-          <div class="position bg-secondary" >
+          <div style="background-color: rgb(219, 204, 204);" class="text-dark" >
             <div class=" container  ">
-                <div class='container  text-light'>
+                <div class='container  text-dark'>
                     <h1 class="display-4 ml-4">heading_1</h1>
                     <div class='row text-dark '>
                         <div class="card col-lg-3 mx-auto bg-light my-2" style="width: 18rem;">
@@ -77,7 +77,7 @@ Women empowerment | she can do everything
                 </div>
           
                 <div class='container rounded  mt-2'>
-                    <h1 class="display-4 ml-4 text-light">heading_2</h1>
+                    <h1 class="display-4 ml-4 text-dark">heading_2</h1>
                     <div class='row'>
                         <div class="card col-lg-3 mx-auto  my-2" style="width: 18rem;">
                         <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
@@ -103,7 +103,7 @@ Women empowerment | she can do everything
                 </div>
           
                 <div class='container rounded  mt-2'>
-                    <h1 class="display-4 ml-4 text-light">heading_3</h1>
+                    <h1 class="display-4 ml-4 text-dark">heading_3</h1>
                     <div class='row'>
                         <div class="card col-lg-3 mx-auto  my-2" style="width: 18rem;">
                         <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">

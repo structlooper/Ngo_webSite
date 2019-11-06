@@ -14,7 +14,8 @@ class OurWorkController extends Controller
         return view('ourworks.health');
      }
     public function women(){
-        return view('ourworks.women_enporment');
+        return view('ourworks.womenEnpowerment');
      }
+   
 
 }

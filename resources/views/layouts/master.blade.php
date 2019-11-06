@@ -67,9 +67,17 @@
           </li>
           <li>
             <label class="ml-4 text-white" ><b>Our works edit</b>
-            <a href="./notifications.html">
+            <a href="./ourWorksEducationEdit">
               <i class="now-ui-icons ui-2_settings-90"></i>
-              <p class="text-white">test events</p>
+              <p class="text-white">Education Edit</p>
+            </a>
+            <a href="./ourWorksHealthEdit">
+             
+              <p class="text-white ml-5">Health Edit</p>
+            </a>
+            <a href="./ourWorksWomenEnpowermentEdit">
+             
+              <p class="text-white ml-5">Women Enpt Edit</p>
             </a>
           </label>
           </li>

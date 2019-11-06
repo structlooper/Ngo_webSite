@@ -31,7 +31,8 @@ Route::get('/events','EventsController@index');
 
 Route::get('/our_works/education','OurWorkController@education');
 Route::get('/our_works/health','OurWorkController@health');
-Route::get('/our_works/women_enpowerment','OurWorkController@women');
+Route::get('/our_works/WomenEnpowerment','OurWorkController@women');
+
 
 // Route::get('/home', function (){
 //     return view('welcome');
@@ -47,14 +48,33 @@ Route::post('/paytm-callback','DonateController@paytmCallback');
 
 Route::group(['middleware' => ['auth','Admin']], function () {
     
+
     Route::any('/dashboard', 'DashboardController@index')->name("dashboard");
     Route::get('/profiles','DashboardController@profiles');
     
+
     Route::get('/aboutusEdit','AboutEditWhoWeAreController@index');
     Route::post('/aboutSave','AboutEditWhoWeAreController@store')->name('aboutSave');
     
+
     Route::get('/aboutusEditTeam','AboutTeamEditController@index_1');
     Route::post('/slideData','AboutTeamEditController@store_slide_data')->name('SaveData');
     Route::post('/departmentMember','AboutTeamEditController@add_member_department')->name('SaveDeaprtmentMember');
 
+
+    Route::get('/ourWorksEducationEdit','OurWorkEditController@Education');
+    Route::post('/educationSlideSave','OurWorkEditController@educationSlideSave')->name('educationSlideSave');
+    Route::post('/educationSideDataSave','OurWorkEditController@educationSideDataSave')->name('educationSideDataSave');
+    Route::post('/educationSpecificWorkSave','OurWorkEditController@educationSpecificWorkSave')->name('educationSpecificWorkSave');
+    
+    Route::get('/ourWorksHealthEdit','OurWorkEditController@Health');
+    Route::post('/healthSlideSave','OurWorkEditController@healthSlideSave')->name('healthSlideSave');
+    Route::post('/healthSideDataSave','OurWorkEditController@healthSideDataSave')->name('healthSideDataSave');
+    Route::post('/healthSpecificWorkSave','OurWorkEditController@healthSpecificWorkSave')->name('healthSpecificWorkSave');
+    
+    Route::get('/ourWorksWomenEnpowermentEdit','OurWorkEditController@womenEnpowerment');
+
+
+
+    
 });
