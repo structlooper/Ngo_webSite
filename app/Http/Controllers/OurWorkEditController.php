@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 
+use App\womenSlide;
 use App\healthSlide;
+use App\womenSideData;
 use App\educationSlide;
 use App\healthSideData;
 use App\educationSideData;
+use App\womenSpecificWork;
 use App\healthSpecificWork;
 use Illuminate\Http\Request;
 use App\educationSpecificWork;
@@ -140,7 +143,7 @@ class OurWorkEditController extends Controller
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension(); //geting extension from image Extension
                 $filename =  uniqid() . '.' . $extension;
-                $file->move('uploades/ourWork/education/sideContentImage', $filename);
+                $file->move('uploades/ourWork/health/sideContentImage', $filename);
                 $health_side_data_save->image = $filename;
                 
             }
@@ -162,7 +165,7 @@ class OurWorkEditController extends Controller
                 $file = $request->file('member_picture');
                 $extension = $file->getClientOriginalExtension(); //geting extension from image Extension
                 $filename =  uniqid() . '.' . $extension;
-                $file->move('uploades/ourWork/education/specificWorkImage', $filename);
+                $file->move('uploades/ourWork/health/specificWorkImage', $filename);
                 $health_specific_work_save->image = $filename;
                 
             }
@@ -182,4 +185,73 @@ class OurWorkEditController extends Controller
     return view('admin.ourWorkWomenEnpowermentEdit');
         
     }
+        function womenSlideSave(request $request){
+                
+
+            $women_slide = new womenSlide();
+
+            $women_slide->content = $request->input('content'); //maked exception
+            
+            if ($request->hasfile('slide_image')) {
+                $file = $request->file('slide_image');
+                $extension = $file->getClientOriginalExtension(); //geting extension from image Extension
+                $filename =  uniqid() . '.' . $extension;
+                $file->move('uploades/ourWork/women/slideImage', $filename);
+                $women_slide->image = $filename;
+                
+            }
+            else {
+                return $request;
+                $women_slide->image = '';
+            }
+            
+            $women_slide->save();
+            
+            return redirect('/ourWorksWomenEnpowermentEdit');
+        }
+        function womenSideDataSave(request $request){
+            $women_side_data_save = new womenSideData();
+            
+            $women_side_data_save->heading = $request->input('heading'); //marked exception
+            $women_side_data_save->content = $request->input('content'); //marked exception
+
+            if ($request->hasfile('image')) {
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension(); //geting extension from image Extension
+                $filename =  uniqid() . '.' . $extension;
+                $file->move('uploades/ourWork/women/sideContentImage', $filename);
+                $women_side_data_save->image = $filename;
+                
+            }
+            else {
+                return $request;
+                $women_side_data_save->image = '';
+            }
+            
+            $women_side_data_save->save();
+            
+            return redirect('/ourWorksWomenEnpowermentEdit');
+        }
+        function womenSpecificWorkSave(request $request){
+
+            $women_specific_work_save = new womenSpecificWork();
+
+            $women_specific_work_save->content = $request->input('content'); //marked exception
+            if ($request->hasfile('member_picture')) {
+                $file = $request->file('member_picture');
+                $extension = $file->getClientOriginalExtension(); //geting extension from image Extension
+                $filename =  uniqid() . '.' . $extension;
+                $file->move('uploades/ourWork/women/specificWorkImage', $filename);
+                $women_specific_work_save->image = $filename;
+                
+            }
+            else {
+                return $request;
+                $women_specific_work_save->image = '';
+            }
+            
+            $women_specific_work_save->save();
+            
+            return redirect('/ourWorksWomenEnpowermentEdit');
+        }
 }

@@ -9,7 +9,7 @@
      <div class="container">
                 <h1 class=" border bg-secondary text-light pl-2">Women Enpowerment Works Detail Upload</h1>
                 <div class="container border rounded pt-2">
-                    <form method="post"  action="{{ route('healthSlideSave')}}" enctype="multipart/form-data" >
+                    <form method="post"  action="{{ route('womenSlideSave')}}" enctype="multipart/form-data" >
                             @csrf
                             <h2>Slide Details upload</h2>
                             <div class="col-sm-3 control-label border">
@@ -40,7 +40,7 @@
                 <br><br>
                 <h1 class="display-4 border bg-secondary text-light pl-2">Details & side image</h1>
                 <div class="container border rounded pt-2">
-                  <form method="post"  action="{{ route('healthSideDataSave')}}" enctype="multipart/form-data" >
+                  <form method="post"  action="{{ route('womenSideDataSave')}}" enctype="multipart/form-data" >
                           @csrf
                           <div class="form-group clearfix">
                             <label class="col-sm-3 control-label ">
@@ -79,7 +79,7 @@
               <br><br>
               <h1 class="display-4 border bg-secondary text-light pl-2">specific work details</h1>
               <div class="container border rounded pt-2">
-                        <form method="post"  action="{{ route('healthSpecificWorkSave')}}" enctype="multipart/form-data" >
+                        <form method="post"  action="{{ route('womenSpecificWorkSave')}}" enctype="multipart/form-data" >
                                 @csrf
                                 <div class="col-sm-3 control-label border">
                                   <label for="">upload image</label>
