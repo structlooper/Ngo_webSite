@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title_das_str')
-        Events Details | upload
+        Events Details Upload
     
 @endsection
 

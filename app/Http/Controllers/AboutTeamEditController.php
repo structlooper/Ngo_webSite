@@ -32,14 +32,16 @@ class AboutTeamEditController extends Controller
             $about_team_side_data->image = $filename;
             
         }
-        else {
+        
+        else{
+            
             return $request;
-            $about_team_side_data->image = '';
         }
         
         $about_team_side_data->save();
         
         return redirect('/aboutusEditTeam');
+        
         
     }
     public function add_member_department(request $request)
