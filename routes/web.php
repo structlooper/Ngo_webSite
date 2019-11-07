@@ -19,7 +19,6 @@ Route::get('/contactUs','IndexController@contact')->name('contact_us');
 // about_us......
 Route::get('/aboutus/who_we_are','AboutController@about_us');
 Route::get('/aboutus','AboutController@about_us');
-
 Route::get('/aboutus/team','AboutController@team');
 
 
@@ -33,18 +32,12 @@ Route::get('/our_works/education','OurWorkController@education');
 Route::get('/our_works/health','OurWorkController@health');
 Route::get('/our_works/WomenEnpowerment','OurWorkController@women');
 
-
-// Route::get('/home', function (){
-//     return view('welcome');
-// });
-
 Auth::routes();
-
-
 
 
 Route::post('/donating', 'DonateController@store')->name('donating');
 Route::post('/paytm-callback','DonateController@paytmCallback');
+
 
 Route::group(['middleware' => ['auth','Admin']], function () {
     
@@ -78,7 +71,10 @@ Route::group(['middleware' => ['auth','Admin']], function () {
     Route::post('/womenSideDataSave','OurWorkEditController@womenSideDataSave')->name('womenSideDataSave');
     Route::post('/womenSpecificWorkSave','OurWorkEditController@womenSpecificWorkSave')->name('womenSpecificWorkSave');
     
-
+    Route::get('/eventsEdit' , 'EventsEditController@events');
+    Route::post('/eventSlideSave' , 'EventsEditController@eventSlideDataSave')->name('eventSlideDataSave');
+    Route::post('/eventUpcomingSave' , 'EventsEditController@eventUpcomingDataSave')->name('eventUpcomingDataSave');
+    Route::post('/eventHistorySave' , 'EventsEditController@eventHistoryDataSave')->name('eventHistoryDataSave');
 
 
     

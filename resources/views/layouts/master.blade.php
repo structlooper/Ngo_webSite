@@ -60,7 +60,7 @@
           </label>
           </li>
           <li>
-            <a href="./map.html">
+            <a href="./eventsEdit">
               <i class="now-ui-icons design-2_ruler-pencil"></i>
               <b>Events Edit</b>
             </a>
@@ -198,12 +198,13 @@
  
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.3.0" type="text/javascript"></script>
+  
   <!-- include summernote css/js -->
-  <title>Summernote Lite</title>
+  
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
-
+  
    @yield('scripts')
  
 </body>
