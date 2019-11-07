@@ -31,13 +31,13 @@ class AboutEditWhoWeAreController extends Controller
             $who_we_are->image = $filename;
             
         }
-        else {
+       
+        else{
             return $request;
-            $who_we_are->image = '';
         }
         
         $who_we_are->save();
-        
+
         return redirect('/aboutusEdit');
         
     }
