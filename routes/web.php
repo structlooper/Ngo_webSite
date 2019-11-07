@@ -75,7 +75,8 @@ Route::group(['middleware' => ['auth','Admin']], function () {
     Route::post('/eventSlideSave' , 'EventsEditController@eventSlideDataSave')->name('eventSlideDataSave');
     Route::post('/eventUpcomingSave' , 'EventsEditController@eventUpcomingDataSave')->name('eventUpcomingDataSave');
     Route::post('/eventHistorySave' , 'EventsEditController@eventHistoryDataSave')->name('eventHistoryDataSave');
-
-
+    
+    Route::get('/donateEdit','DonateEditController@donateEdit');
+    Route::post('/donateDataSave' , 'DonateEditController@donateDataSave')->name('donatePageDataSave');
     
 });

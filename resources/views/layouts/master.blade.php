@@ -82,9 +82,9 @@
           </label>
           </li>
           <li>
-              <a href="./notifications.html">
+              <a href="/donateEdit">
                 <i class="now-ui-icons ui-1_email-85"></i>
-                <b>Contact us edit</b>
+                <b>Donate Page</b>
               </a>
             </li>
             <li class="ml-4 text-success border-bottom">
