@@ -1,19 +1,18 @@
-@extends('layouts.header')
 @extends('layouts.footer')
 @extends('layouts.nav')
 
-@section('footer_str')
-@section('nav_bar')
-@endsection('nav_bar')
-@section('header_str')
-
-@endsection('header_str')
-
-<title>Donation status | Failed</title>
-<h1>oopss!!</h1>
-<h2>Your payment is failed</h2>
+@section('title_str')
+    Donation status | Failed
+@endsection
 
 
 
-<div class='mt-2'>
-    @endsection('footer_str')
+@section('content_str')
+<div class="content">
+    <div class="container text-center">
+            <h1>oopss!!</h1>
+            <h2>Your payment is failed</h2>
+    </div>
+</div>
+<hr>
+@endsection
