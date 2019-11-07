@@ -72,7 +72,12 @@ Route::group(['middleware' => ['auth','Admin']], function () {
     Route::post('/healthSideDataSave','OurWorkEditController@healthSideDataSave')->name('healthSideDataSave');
     Route::post('/healthSpecificWorkSave','OurWorkEditController@healthSpecificWorkSave')->name('healthSpecificWorkSave');
     
+    
     Route::get('/ourWorksWomenEnpowermentEdit','OurWorkEditController@womenEnpowerment');
+    Route::post('/womenSlideSave','OurWorkEditController@womenSlideSave')->name('womenSlideSave');
+    Route::post('/womenSideDataSave','OurWorkEditController@womenSideDataSave')->name('womenSideDataSave');
+    Route::post('/womenSpecificWorkSave','OurWorkEditController@womenSpecificWorkSave')->name('womenSpecificWorkSave');
+    
 
 
 
