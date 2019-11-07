@@ -162,53 +162,53 @@
 @endsection
 
 @section('scripts')
-        <script>
+  <script>
 
-function registerSummernote(element, placeholder, max, callbackMax) {
-    $(element).summernote({
-      toolbar: [
-        ['style', ['bold', 'italic', 'underline', 'clear']]
-      ],
-      placeholder,
-      callbacks: {
-        onKeydown: function(e) {
-          var t = e.currentTarget.innerText;
-          if (t.trim().length >= max) {
-            //delete key
-            if (e.keyCode != 8)
+      function registerSummernote(element, placeholder, max, callbackMax) {
+        $(element).summernote({
+          toolbar: [
+            ['style', ['bold', 'italic', 'underline', 'clear']]
+          ],
+          placeholder,
+          callbacks: {
+            onKeydown: function(e) {
+              var t = e.currentTarget.innerText;
+              if (t.trim().length >= max) {
+                //delete key
+                if (e.keyCode != 8)
+                  e.preventDefault();
+                // add other keys ...
+              }
+            },
+            onKeyup: function(e) {
+              var t = e.currentTarget.innerText;
+              if (typeof callbackMax == 'function') {
+                callbackMax(max - t.trim().length);
+              }
+            },
+            onPaste: function(e) {
+              var t = e.currentTarget.innerText;
+              var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
               e.preventDefault();
-            // add other keys ...
+              var all = t + bufferText;
+              document.execCommand('insertText', false, all.trim().substring(0, 400));
+              if (typeof callbackMax == 'function') {
+                callbackMax(max - t.length);
+              }
+            }
           }
-        },
-        onKeyup: function(e) {
-          var t = e.currentTarget.innerText;
-          if (typeof callbackMax == 'function') {
-            callbackMax(max - t.trim().length);
-          }
-        },
-        onPaste: function(e) {
-          var t = e.currentTarget.innerText;
-          var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
-          e.preventDefault();
-          var all = t + bufferText;
-          document.execCommand('insertText', false, all.trim().substring(0, 400));
-          if (typeof callbackMax == 'function') {
-            callbackMax(max - t.length);
-          }
-        }
+        });
       }
-    });
-  }
 
 
-$(function(){
-  registerSummernote('.summernote', 'Leave a comment', 400, function(max) {
-    $('#maxContentPost').text(max)
-  });
-});
-    
+      $(function(){
+      registerSummernote('.summernote', 'Leave a comment', 400, function(max) {
+        $('#maxContentPost').text(max)
+      });
+      });
+        
 
                
                
-        </script>
+  </script>
 @endsection
