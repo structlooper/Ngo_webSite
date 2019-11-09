@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\AboutEditWhoWeAre;
 use Illuminate\Http\Request;
+use App\about_team_slide_data;
 
 
 class AboutController extends Controller
@@ -16,9 +17,9 @@ class AboutController extends Controller
    
 
     public function team(){
-        return view('about.team');
+        $datas = about_team_slide_data::all();
+        return view('about.team')->with('datas',$datas);
     }
     
     
 }
-?>

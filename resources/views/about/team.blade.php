@@ -13,20 +13,18 @@
     <div class="container-fluid">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="carousel-caption text-left">
-                      <h1>Example headline.</h1>
-                    </div>
-                  </div>
-              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="First slide" width='1146px' height='450px'>
+            @foreach ($datas as $data)
+                
+            <div class="carousel-item @if($loop->first) active @endif">
+              <div class="container">
+                <div class="carousel-caption text-left">
+                <h1>{{$data->slide_details}}</h1>
+                </div>
+              </div>
+              <img class="d-block w-100" src="{{asset('uploades/aboutus/team/slideImage\\') . $data->image}}" alt="First slide" width='1146px' height='450px'>
             </div>
-            <div class="carousel-item ">
-              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Second slide" width='1146px' height='450px'>
-            </div>
-            <div class="carousel-item ">
-              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Third slide" width='1146px' height='450px'>
-            </div>
+            @endforeach
+            
           </div>
          
           <a class="carousel-control-prev bg-dark" href="#carouselExampleControls" role="button" data-slide="prev">

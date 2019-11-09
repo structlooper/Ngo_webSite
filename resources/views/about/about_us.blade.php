@@ -21,7 +21,7 @@
                     <p class="lead">{!! $data->content !!}</p>
                   </div>
                   <div class="col-md-5 order-md-1">
-                    <img class="featurette-image img-fluid mx-auto"  alt="500x500" src="{{ asset('uploades/aboutus/who_we_are/' . $data->image) }}"  style="width: 500px; height: 500px;">
+                    <img class="featurette-image img-fluid mx-auto"  alt="500x500" src="{{ asset('uploades/aboutus/who_we_are/' . $data->image) }}"  style="width: 800px; height: 300px;">
                   </div>
                 </div>
             </div>  
@@ -34,7 +34,7 @@
                       <p class="lead">{!! $data->content !!}</p>
                     </div>
                     <div class="col-md-5">
-                      <img class="featurette-image img-fluid mx-auto" alt="500x500" src="{{ asset('uploades/aboutus/who_we_are/' . $data->image) }}"  style="width: 500px; height: 500px;">
+                      <img class="featurette-image img-fluid mx-auto" alt="500x500" src="{{ asset('uploades/aboutus/who_we_are/' . $data->image) }}"  style="width: 500px; height: 300px;">
                     </div>
                   </div>
                 </div>
