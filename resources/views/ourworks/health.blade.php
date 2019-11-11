@@ -38,7 +38,7 @@ Health | keeping everyone safe
       </div>
     </div>
     <hr>
-    @foreach ($sideDatas as $sidedata)
+    @foreach ($sideDatas->take(1) as $sidedata)
           <div class=' text-dark bg-light'>
                 <div class='container py-2 ' >
                       <div class="row featurette">
