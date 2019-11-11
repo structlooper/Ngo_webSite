@@ -10,7 +10,7 @@
 
 @section('content_str')
 <div class="content">
-  <h3 class='display-4 bg-warning rounded pl-5'>Current events</h3>
+  <h3 class='display-4  rounded pl-5 text-center text-white' style="background-color:#6d7993;  ">Current events</h3>
   <div class='container'>
       <div class="container-fluid">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -44,8 +44,8 @@
   
   
         <hr>
-        <h3 class='display-4 bg-warning rounded pl-5'>Upcoming events</h3>
-  <div class="container">
+        <h3 class='display-4  rounded pl-5 text-center text-white' style="background-color:#6d7993;  ">Upcoming events</h3>
+  <div class="container " style="background-color:#d5d5d5;  ">
       <div class="row">
         <div class="col-lg-12 border">
                 <table class="table ">
@@ -84,8 +84,8 @@
     </div>  
        
         <hr>
-        <h3 class='display-4 bg-warning rounded pl-5'>Past events</h3>
-    <div class="container">
+        <h3 class='display-4  rounded pl-5 text-center text-white' style="background-color:#6d7993;  ">Past events</h3>
+    <div class="container" style="background-color:#DCD0C0;  ">
    <div class="row">
     <div class="col-lg-12 border">
                 <table class="table ">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DonatePageData;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -16,7 +17,8 @@ class IndexController extends Controller
     }
 
     public function donate(){
-        return view('index.donate');
+        $DonatePageDatas = DonatePageData::all();
+        return view('index.donate')->with('DonatePageDatas',$DonatePageDatas);
     }
 
 

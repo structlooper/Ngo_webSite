@@ -14,11 +14,15 @@
   
         <div class='row'>
           <div class="col-sm-6 p-3 p-md-5 text-secondary rounded bg-light">
-            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="">
+            @foreach ($DonatePageDatas->take(1) as $DonatePageData)
+                
             
-            <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-            <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
-            <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+            <img class="card-img-top" src="{{asset('uploades/donatePageImage\\') . $DonatePageData->image}}" alt="image" width='500px' height='450px'>
+            
+          <h1 class="display-4 font-italic"> {{$DonatePageData->heading}}</h1>
+            <p class="lead my-3">{!!$DonatePageData->content!!} </p>
+            @endforeach
+            {{-- <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p> --}}
               
           </div>
           <div class="col-sm-5 p-3 p-md-6 text-dark rounded bg-light border ml-2">
