@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\womenSlide;
 use App\healthSlide;
+use App\womenSideData;
 use App\educationSlide;
 use App\healthSideData;
 use App\educationSideData;
+use App\womenSpecificWork;
 use App\healthSpecificWork;
 use Illuminate\Http\Request;
 use App\educationSpecificWork;
@@ -28,8 +31,10 @@ class OurWorkController extends Controller
         return view('ourworks.health')->with('slideDatas',$slideDatas)->with('sideDatas',$sideDatas)->with('specificDatas',$specificDatas);
      }
     public function women(){
-        
-        return view('ourworks.womenEnpowerment');
+        $slideDatas = womenSlide::all();
+        $sideDatas = womenSideData::all();
+        $specificDatas = womenSpecificWork::all();
+        return view('ourworks.womenEnpowerment')->with('slideDatas',$slideDatas)->with('sideDatas',$sideDatas)->with('specificDatas',$specificDatas);
      }
    
 
