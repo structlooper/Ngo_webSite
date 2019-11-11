@@ -56,7 +56,13 @@
                             Departmen name
                           </label>
                           <div class="col-sm-9">
-                            <input type="text" class="heading-1-text form-control bg-light " placeholder="Department Name"    name='department_name' >
+                            {{-- <input type="text" class="heading-1-text form-control bg-light " placeholder="Department Name"    name='department_name' > --}}
+                            <select class="form-control bg-light" name="department_name" >
+                              <option value="" selected>Select Department</option>
+                                <option value="education">Education</option>
+                                <option value="health">Health</option>
+                                <option value="women_enpowerment">Women Enpowerment</option>
+                              </select>
                           </div>
                         </div>
                         <br>

@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            @foreach ($datas as $data)
+            @foreach ($datas->take(3) as $data)
                 
             <div class="carousel-item @if($loop->first) active @endif">
               <div class="container">
@@ -38,83 +38,61 @@
         </div>
         <hr>
   </div>
-  <div class='container rounded border'>
-      <h1 class="display-4 ml-4">Department 1</h1>
-      <div class='row'>
-          <div class="card col-lg-3 mx-auto  my-2" style="width: 18rem;">
-          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-       </div>
-       
-          <div class="card col-lg-3 mx-auto my-2" style="width: 18rem;">
-          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-       </div>
-      
-          <div class="card col-lg-3 mx-auto my-2" style="width: 18rem;">
-          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-      </div>
-    </div>
-  </div>
   
-  <div class='container rounded border mt-2'>
-      <h1 class="display-4 ml-4">Department 2</h1>
-      <div class='row'>
-          <div class="card col-lg-3 mx-auto  my-2" style="width: 18rem;">
-          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-       </div>
-       
-          <div class="card col-lg-3 mx-auto my-2" style="width: 18rem;">
-          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-       </div>
-      
-          <div class="card col-lg-3 mx-auto my-2" style="width: 18rem;">
-          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-      </div>
+  <div class='container-fluid rounded border'>
+    <h1 class="display-4 ml-4 container">Education Department</h1>
+    <div class='row'>
+      @foreach ($memberDatas as $memberData)
+      @if ($memberData->department_name === "education")
+              <div class="card col-lg-3 mx-auto  my-2" style="width: 18rem;">
+              <img class="card-img-top" src="{{asset('uploades/aboutus/team/memberImage\\') . $memberData->image}}" alt="Card image cap">
+              <div class="card-body">
+              <p class="card-text">{{ $memberData->member_name }} <br>{{ $memberData->department_name }} <br>{{ $memberData->member_email }} <br>{{ $memberData->member_more_details }}</p>
+              </div>
+            </div>
+        @endif
+        @endforeach      
+     </div>
     </div>
-  </div>
+
+     
+     
+     <div class='container-fluid border mt-2 border-rounded'>
+       <h1 class="display-4 ml-4 container">Health Department</h1>
+       <div class='row'>
+         @foreach ($memberDatas as $memberData)
+         @if ($memberData->department_name === "health")
+            <div class="card col-lg-3 mx-auto  my-2" style="width: 18rem;">
+              <img class="card-img-top" src="{{asset('uploades/aboutus/team/memberImage\\') . $memberData->image}}" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">{{ $memberData->member_name }} <br>{{ $memberData->department_name }} <br>{{ $memberData->member_email }} <br>{{ $memberData->member_more_details }}</p>
+              </div>
+            </div>
+          @endif
+          @endforeach
+        </div>
+      </div>
+               
+               
+      
+      <div class='container-fluid rounded border mt-2'>
+          <h1 class="display-4 ml-4 container">Women Enpowerment Department</h1>
+          <div class='row'>
+              @foreach ($memberDatas as $memberData)
+              @if ($memberData->department_name === "women_enpowerment")
+              <div class="card col-lg-3 mx-auto  my-2" style="width: 18rem;">
+              <img class="card-img-top" src="{{asset('uploades/aboutus/team/memberImage\\') . $memberData->image}}" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">{{ $memberData->member_name }} <br>{{ $memberData->department_name }} <br>{{ $memberData->member_email }} <br>{{ $memberData->member_more_details }}</p>
+              </div>
+              </div>
+              @endif
+              @endforeach    
+        </div>
+      </div>
+     
   
-  <div class='container rounded border mt-2'>
-      <h1 class="display-4 ml-4">Department 3</h1>
-      <div class='row'>
-          <div class="card col-lg-3 mx-auto  my-2" style="width: 18rem;">
-          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-       </div>
-       
-          <div class="card col-lg-3 mx-auto my-2" style="width: 18rem;">
-          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-       </div>
-      
-          <div class="card col-lg-3 mx-auto my-2" style="width: 18rem;">
-          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-      </div>
-    </div>
-  </div>
+
 </div>
 <hr>
 @endsection
