@@ -17,8 +17,8 @@
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                    <!-- <li data-target="#carouselExampleCaptions" data-slide-to="3"></li> -->
-            </ol>
+
+                  </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item">
                       <img src="images/img1.jpg" class="d-block w-100" alt="First slide" width='1146px' height='450px'>
@@ -63,8 +63,8 @@
                           </div>
                           <div class="col-md-5 ">
                           <img src="images/img2.jpg" alt=""  width='450px' height='400px'>
-                            <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-                          </div>
+
+                        </div>
                         </div>
                     <br>
                   
@@ -79,40 +79,38 @@
             <div class='row'>
             
               <!-- Education Field....................... -->
-              <div class='col-lg-6  ml-auto mt-auto pt-auto '>
+              <div class='col-lg-6    ml-auto mt-auto pt-auto '>
+                <div class="container border">
                   <h3>Education</h3>
                   <div id="carouselExampleControls1" class="carousel slide " data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                      <!-- <div class="col-lg-4 mt-1 "> -->
+
                         <img class="card-img-top"
                       src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
                       alt="Card image cap">
                               <h2>Education for every child</h2>
-                                <p >Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                                  <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
-                        <!-- </div>/.col-lg-4 -->
-                      </div>
+                                <p class=p1 >Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+
+                              </div>
                       <div class="carousel-item">
-                      <!-- <div class="col-lg-4 mt-1 bg-white text-dark"> -->
+
                         <img class="card-img-top"
                       src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
                       alt="Card image cap">
                                   <h2>Feeding the hungry people</h2>
-                                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                                  <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
-                        <!-- </div>/.col-lg-4 -->
-                      </div>
+                                  <p class=p1>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+
+                                </div>
                       <div class="carousel-item">
-                      <!-- <div class="col-lg-4 mt-1"> -->
+
                         <img class="card-img-top"
                       src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
                       alt="Card image cap">
                                   <h2>Providing cloth people</h2>
-                                  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
-                                  <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
-                        <!-- </div>/.col-lg-4 -->
-                      </div>
+                                  <p class=p1>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
+
+                                </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -124,44 +122,43 @@
                     </a>
                   </div>
                 </div>
+              </div>
                   
 
 
               <!-- Health Field................................... -->
                 <div class='col-lg-6 ml-auto mt-auto  pt-auto'>
+                <div class="container border">
                 <h3>Health</h3>
                   <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                      <!-- <div class="col-lg-4 mt-1 "> -->
+
                         <img class="card-img-top"
                       src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
                       alt="Card image cap">
                               <h2>Education for every child</h2>
-                                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                                  <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
-                        <!-- </div>/.col-lg-4 -->
-                      </div>
+                                <p class=p1>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+
+                              </div>
                       <div class="carousel-item">
-                      <!-- <div class="col-lg-4 mt-1 bg-white text-dark"> -->
+
                         <img class="card-img-top"
                       src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
                       alt="Card image cap">
                                   <h2>Feeding the hungry people</h2>
-                                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                                  <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
-                        <!-- </div>/.col-lg-4 -->
+                                  <p class=p1>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                        
                       </div>
                       <div class="carousel-item">
-                      <!-- <div class="col-lg-4 mt-1"> -->
+
                         <img class="card-img-top"
                       src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
                       alt="Card image cap">
                                   <h2>Providing cloth people</h2>
-                                  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
-                                  <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
-                        <!-- </div>/.col-lg-4 -->
-                      </div>
+                                  <p  class='p1 ' >Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
+
+                                </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -173,11 +170,11 @@
                     </a>
                   </div>
                 </div>
-            
+              </div>
             </div>
           </div>
         </div>
-        <!--/.Carousel Wrapper-->
+
 
           
 
@@ -193,23 +190,25 @@
                     <h2>Education for every child</h2>
                       <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
                         <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
-              </div><!-- /.col-lg-4 -->
-              <div class="col-lg-4 mt-auto bg-white text-dark pt-2">
-              <img class="card-img-top"
+              </div>
+
+              <div class="col-lg-4 mt-auto bg-white text-dark pt-2 my-1">
+              <img class="card-img-top "
             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
             alt="Card image cap">
                         <h2>Feeding the hungry people</h2>
-                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                        <p >Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                         <p><a class="btn btn-info" href="#" role="button">View details »</a></p>
-              </div><!-- /.col-lg-4 -->
+              </div>
+
               <div class="col-lg-4 mt-auto  ">
-              <img class="card-img-top"
+              <img class="card-img-top mt-1"
             src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
             alt="Card image cap">
                         <h2>Providing cloth people</h2>
-                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
-                        <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
-              </div><!-- /.col-lg-4 -->
+                        <p class=p1>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
+                        <p ><a class="btn btn-warning" href="#" role="button">View details »</a></p>
+              </div>
           
           </div>
       
@@ -222,7 +221,15 @@
 </div>
 @endsection
 
-
+<style>
+  .p1 {
+    width: 254px;
+    /* height:100px; */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    /* background-color: whitesmoke; */
+}</style>
 
 
 
