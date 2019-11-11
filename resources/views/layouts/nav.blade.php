@@ -54,7 +54,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <header class="header_area ">
-        <div class="main_menu  border border-top-0 border-dark ml-1  rounded" style="background-color:pink;  " >
+        <div class="main_menu  border border-top-0 border-dark ml-1  rounded" style="background-color:#bfd8d2;  " >
             <div class="container-fluid  ">
                 <nav class="navbar navbar-expand-lg   navbar-light">
                     <div class="container">
@@ -151,7 +151,7 @@
 
    
   
-<hr>
+
 <div class="content">
 
     @yield('content_str')
