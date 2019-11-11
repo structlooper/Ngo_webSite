@@ -18,12 +18,12 @@
               @foreach ($datas->take(3) as $data)
                   
               <div class="carousel-item @if($loop->first) active @endif">
-                <div class="container">
-                  <div class="carousel-caption text-left">
-                  <h1>{{$data->content}}</h1>
+                  <img class="d-block w-100" src="{{asset('uploades/events/current_event_slide\\') . $data->image}}" alt="First slide" width='1146px' height='450px'>
+                  <div class="container">
+                    <div class="carousel-details text-center">
+                    <h1>{{$data->content}}</h1>
+                    </div>
                   </div>
-                </div>
-                <img class="d-block w-100" src="{{asset('uploades/events/current_event_slide\\') . $data->image}}" alt="First slide" width='1146px' height='450px'>
               </div>
               @endforeach
               
