@@ -223,7 +223,7 @@
 
 <style>
   .p1 {
-    width: 254px;
+    width: 250px;
     /* height:100px; */
     /* white-space: nowrap; */
     /* overflow: hidden; */

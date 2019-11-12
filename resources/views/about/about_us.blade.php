@@ -13,8 +13,8 @@
 <div class="content">
     @foreach ($datas as $data)
       @if ($data->id%2 == 0)
-          
-      <div class='container'>
+       <div style="background-color:#d5d5d5;  " >   
+      <div class='container py-3' >
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading">{{ $data->heading }} </h2>
@@ -24,10 +24,12 @@
                     <img class="featurette-image img-fluid mx-auto"  alt="500x500" src="{{ asset('uploades/aboutus/who_we_are/' . $data->image) }}"  style="width: 800px; height: 300px;">
                   </div>
                 </div>
-            </div>  
-                <hr>
+            </div> 
+          </div>
+                
                 @else
-              <div class='container'>     
+          <div class='border-bottom border-dark'style="background-color:#DCD0C0;  ">
+              <div class='container py-3'>     
                 <div class="row featurette">
                   <div class="col-md-7">
                       <h2 class="featurette-heading">{{ $data->heading }}</h2>
@@ -39,7 +41,8 @@
                   </div>
                 </div>
               </div>
-              <hr>
+          </div>
+              
     @endif
     @endforeach
     @endsection
