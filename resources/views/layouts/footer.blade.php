@@ -1,6 +1,6 @@
 @yield('footer_str')
 
-<div class=' border border-dark ml-1 border-bottom-0 rounded text-dark' style="background-color:#bfd8d2;  ">
+<div class=' border border-dark ml-1 border-bottom-0 rounded text-dark' style="background-color:#7CC7F3;  ">
         <footer class="page-footer font-small stylish-color-light pt-4">
 
 
@@ -22,18 +22,18 @@
               <hr class="clearfix w-100 d-md-none">
 
 
-              <div class="col-md-2 mx-auto">
+              <div class="col-md-2 mx-auto ">
 
 
                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">About us</h5>
 
                 <ul class="list-unstyled">
                   <li>
-                    <a href="/aboutus/who_we_are">About us</a>
+                    <a class='text-white' href="/aboutus/who_we_are">About us</a>
                   </li>
                   
                   <li>
-                    <a href="/aboutus/team">Team</a>
+                    <a class='text-white' href="/aboutus/team">Team</a>
                   </li>
                   
                 </ul>
@@ -51,13 +51,13 @@
 
                 <ul class="list-unstyled">
                   <li>
-                    <a href="/events/events">Events</a>
+                    <a class='text-white' href="/events/events">Events</a>
                   </li>
                   <li>
-                    <a href="/contactUs">Contact us</a>
+                    <a class='text-white' href="/contactUs">Contact us</a>
                   </li>
                   <li>
-                    <a href="https://gmail.com/">contact@ngo_mail.com</a>
+                    <a class='text-white' href="https://gmail.com/">contact@ngo_mail.com</a>
                   </li>
                   
                 </ul>
@@ -75,13 +75,13 @@
 
                 <ul class="list-unstyled">
                   <li class='pt-0'>
-                    <a href="#!"><img src="/icons/facebook.png" width='20px' height='20px'alt=""> facebook</a>
+                    <a class='text-white' href="#!"><img src="/icons/facebook.png" width='20px' height='20px'alt=""> facebook</a>
                   </li>
                   <li class='pt-1'>
-                    <a href="#!"><img src="/icons/twitter.png" width='20px' height='20px' alt=""> twitter</a>
+                    <a class='text-white' href="#!"><img src="/icons/twitter.png" width='20px' height='20px' alt=""> twitter</a>
                   </li>
                   <li class='pt-1'>
-                    <a href="#!"><img src="/icons/linkedin.png" width='20px' height='20px' alt=""> linkedin</a>
+                    <a class='text-white' href="#!"><img src="/icons/linkedin.png" width='20px' height='20px' alt=""> linkedin</a>
                   </li>
                   
                 </ul>
