@@ -104,8 +104,8 @@
                                 Slide image details
                               </label>
                               <div class="col-sm-9">
-                                <input type="text" class="heading-1-text form-control bg-light " placeholder="Content  max : 250 char" maxlength="250"    name='content' >
-                              </div>
+                                  <textarea name="content" id="cnt1" class=" summernote "></textarea>
+                                </div>
                             </div>
                             <br>
                         <div class="col-sm-12 padd">
@@ -140,8 +140,8 @@
                                 Slide image details
                               </label>
                               <div class="col-sm-9">
-                                <input type="text" class="heading-1-text form-control bg-light " placeholder="Content  max : 250 char" maxlength="250"    name='content' >
-                              </div>
+                                  <textarea name="content" id="cnt1" class=" summernote "></textarea>
+                                </div>
                             </div>
                             <br>
                         <div class="col-sm-12 padd">
@@ -180,7 +180,8 @@
                                 Slide image details
                               </label>
                               <div class="col-sm-9">
-                                <input type="text" class="heading-1-text form-control bg-light " placeholder="Content  max : 250 char" maxlength="250"    name='content' >
+                                <textarea name="content" id="cnt1" class=" summernote "></textarea>
+
                               </div>
                             </div>
                             <br>
