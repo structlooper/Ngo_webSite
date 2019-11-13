@@ -13,31 +13,27 @@
       <!-- SLIDE COROUSEL.................................... -->
       <div class="container-">
           <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            
             <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-
+              @foreach ($home_slide_datas->take(3) as $slide_data)
+              <?php $pos=1 ?>
+            <li data-target="#carouselExampleCaptions" data-slide-to="Slide image {{$pos}}" class=" @if($loop->first) active @endif"></li>
+              <?php $pos++ ?>
+              @endforeach
                   </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item">
-                      <img src="images/img1.jpg" class="d-block w-100" alt="First slide" width='1146px' height='450px'>
+                    <?php $pos=1 ?>
+                    @foreach ($home_slide_datas->take(3) as $slide_data)
+                    <div class="carousel-item @if($loop->first) active @endif">
+                    <img src="{{asset('uploades/HomePage/main_slide\\') . $slide_data->image}}" class="d-block w-100" alt="Slide image {{$pos}}" width='1146px' height='450px'>
                         <div class="carousel-caption d-none d-md-block bg-transparent text-dark">
-                          <h5>Information about image</h5>
+                        <h5 class="display-4 text-light">{{$slide_data->content}}</h5>
                         </div>
                     </div>
-                <div class="carousel-item">
-                    <img src="images/img4.png" class="d-block w-100" alt="Second slide" width='1146px' height='450px'>
-                    <div class="carousel-caption d-none d-md-block bg-transparent text-dark">
-                      <h5>Information about image_2</h5>
-                    </div>
-                </div>
-                <div class="carousel-item active">
-                      <img src="images/img3.jpg" class="d-block w-100" alt="Third slide" width='1146px' height='450px'>
-                      <div class="carousel-caption d-none d-md-block bg-transparent text-dark">
-                        <h5>Information about image_3</h5>
-                      </div>
-                    </div>
+                    <?php $pos++ ?>
+                    @endforeach
+
+                
               </div>
               <a class="carousel-control-prev bg-dark" href="#carouselExampleCaptions" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon " aria-hidden="true"></span>
@@ -57,14 +53,21 @@
                     
                     <!-- features assment informer........... -->
                         <div class="row featurette">
+                          @foreach ($home_about_ngo_datas as $about_ngo_data)
+                              
+                          @if ($loop->last)
+                          
                           <div class="col-md-7">
-                            <h2 class="featurette-heading">About NGO_name Foundation </h2><span class="text-muted">Since @2016</span>
-                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                
+                            <h2 class="featurette-heading">{{$about_ngo_data->heading}}</h2><span class="text-muted">Since @2016</span>
+                            <p class="lead">{!! $about_ngo_data->content !!}</p>
                           </div>
                           <div class="col-md-5 ">
-                          <img src="images/img2.jpg" alt=""  width='450px' height='400px'>
-
-                        </div>
+                            <img src="{{asset('uploades/HomePage/AboutNgoImage\\') . $about_ngo_data->image}}" alt="image"  width='450px' height='400px'>
+                            
+                          </div>
+                          @endif
+                          @endforeach
                         </div>
                     <br>
                   
@@ -83,34 +86,24 @@
                 <div class="container border bg-white">
                   <h3>Education</h3>
                   <div id="carouselExampleControls1" class="carousel slide " data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
+                    <div class=" carousel-inner">
+                      @foreach ($home_education_slide_datas->take(3) as $education_slide_data)
+                          
+                      
+                      <div class="carousel-item  @if($loop->first) active @endif">
 
                         <img class="card-img-top"
-                      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                      alt="Card image cap">
-                              <h2>Education for every child</h2>
-                                <p class=p1 >Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                      src="{{asset('uploades/HomePage/ourWork/EductionSlideImage\\') . $education_slide_data->image}}"
+                      alt="Card image cap" width='450px' height='400px'>
+                      
+                      <div class="carousel-details text-left">
+                              <h2>{{ $education_slide_data->heading }}</h2>
+                              <div class="p1">{!! $education_slide_data->content !!} </div>
+                                
 
                               </div>
-                      <div class="carousel-item">
-
-                        <img class="card-img-top"
-                      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                      alt="Card image cap">
-                                  <h2>Feeding the hungry people</h2>
-                                  <p class=p1>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-
-                                </div>
-                      <div class="carousel-item">
-
-                        <img class="card-img-top"
-                      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                      alt="Card image cap">
-                                  <h2>Providing cloth people</h2>
-                                  <p class=p1>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
-
-                                </div>
+                            </div>
+                       @endforeach
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -132,33 +125,20 @@
                 <h3>Health</h3>
                   <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-
+                      @foreach ($home_health_slide_datas->take(3) as $health_slide_data)
+                     <div class="carousel-item @if($loop->first)active @endif">
                         <img class="card-img-top"
-                      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                      alt="Card image cap">
-                              <h2>Education for every child</h2>
-                                <p class=p1>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                      src="{{asset('uploades/HomePage/ourWork/HealthSlideImage\\') . $health_slide_data->image}}"
+                      alt="Card image cap" width='450px' height='384px'>
+                      <div class="carousel-details text-left">
 
-                              </div>
-                      <div class="carousel-item">
+                              <h2>{{ $health_slide_data->heading}}</h2>
+                                <p class=p1>{{ $health_slide_data->content }}</p>
 
-                        <img class="card-img-top"
-                      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                      alt="Card image cap">
-                                  <h2>Feeding the hungry people</h2>
-                                  <p class=p1>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                        
                       </div>
-                      <div class="carousel-item">
-
-                        <img class="card-img-top"
-                      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                      alt="Card image cap">
-                                  <h2>Providing cloth people</h2>
-                                  <p  class='p1 ' >Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
-
-                                </div>
+                    </div>
+                      @endforeach
+                      
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -180,36 +160,34 @@
 
     <!-- Cards portion for informations.............................. -->
     <h1 class='display-4  rounded pl-5 text-center text-white'style="background-color:#6d7993;  ">Creating Impact</h1>
-    <div class='container bg-info text-white  '>
+    <div class='container bg- text-white  '>
     <div class="row">
-              <div class="col-lg-4 mt-auto ">
+
+      @foreach ($home_creating_impact_datas as $impact_data)
+          @if ($impact_data->id % 2 == 0)
+          <div class="col-lg-4 my-auto bg-info text-white mx-auto  border">
               <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-            alt="Card image cap">
-                    <h2>Education for every child</h2>
-                      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                        <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
+            src="{{asset('uploades/HomePage/CreatingImpact\\') . $impact_data->image}}"
+            alt="Card image cap" height='250px'>
+                    <h2>{{ $impact_data->heading }}</h2>
+                    <div class="p2">{!! $impact_data->content !!} </div>
+              </div>          
+              
+          @else
+              
+              <div class="col-lg-4 my-auto bg-white text-dark mx-auto border   ">
+                  <img class="card-img-top"
+                  src="{{asset('uploades/HomePage/CreatingImpact\\') . $impact_data->image}}"
+                  alt="Card image cap" height='250px'>
+                <h2> {{ $impact_data->heading }}</h2>
+                <div class="p2">{!! $impact_data->content !!} </div>
               </div>
-
-              <div class="col-lg-4 mt-auto bg-white text-dark pt-2 my-1">
-              <img class="card-img-top "
-            src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-            alt="Card image cap">
-                        <h2>Feeding the hungry people</h2>
-                        <p >Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                        <p><a class="btn btn-info" href="#" role="button">View details »</a></p>
-              </div>
-
-              <div class="col-lg-4 mt-auto  ">
-              <img class="card-img-top mt-1"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-            alt="Card image cap">
-                        <h2>Providing cloth people</h2>
-                        <p class=p1>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, </p>
-                        <p ><a class="btn btn-warning" href="#" role="button">View details »</a></p>
-              </div>
+              
+          @endif
+              
           
-          </div>
+    @endforeach   
+    </div>
       
       </div>
     
@@ -222,12 +200,19 @@
 
 <style>
   .p1 {
-    width: 250px;
-    /* height:100px; */
-    /* white-space: nowrap; */
-    /* overflow: hidden; */
+    
+    height: 200px;
+    white-space:normal;
+    overflow:auto;
     text-overflow: ellipsis;
-    /* background-color: whitesmoke; */
+    
+  }
+  .p2{
+    height: 150px;
+    white-space:normal;
+    overflow:auto;
+    /* text-overflow: ellipsis; */
+  }
 }</style>
 
 

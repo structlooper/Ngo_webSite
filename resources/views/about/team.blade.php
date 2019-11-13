@@ -21,7 +21,7 @@
                 <h1>{{$data->slide_details}}</h1>
                 </div>
               </div>
-              <img class="d-block w-100" src="{{asset('uploades/aboutus/team/slideImage\\') . $data->image}}" alt="First slide" width='1146px' height='450px'>
+              <img class="d-block w-100" src="{{asset('uploades/aboutus/team/slideImage\\') . $data->image}}" alt="Slide Image" width='1146px' height='450px'>
             </div>
             @endforeach
             
