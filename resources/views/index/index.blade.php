@@ -73,14 +73,14 @@
         </div> 
 
         <!--our Works Portion.............................................. -->
-          <h1 class='container text-dark pt-2 '>Our Works</h1>
+          <h1 class='display-4  rounded pl-5 text-center text-white'style="background-color:#6d7993;  ">Our Works</h1>
         <div style="background-color:rgb(179, 207, 228)">
           <div class="container" >   
             <div class='row'>
             
               <!-- Education Field....................... -->
               <div class='col-lg-6    ml-auto mt-auto pt-auto '>
-                <div class="container border">
+                <div class="container border bg-white">
                   <h3>Education</h3>
                   <div id="carouselExampleControls1" class="carousel slide " data-ride="carousel">
                     <div class="carousel-inner">
@@ -128,7 +128,7 @@
 
               <!-- Health Field................................... -->
                 <div class='col-lg-6 ml-auto mt-auto  pt-auto'>
-                <div class="container border">
+                <div class="container border bg-white">
                 <h3>Health</h3>
                   <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -179,8 +179,7 @@
           
 
     <!-- Cards portion for informations.............................. -->
-    <h1 class='container text-dark pt-2 mt-2'>Creating Impact</h1>
-
+    <h1 class='display-4  rounded pl-5 text-center text-white'style="background-color:#6d7993;  ">Creating Impact</h1>
     <div class='container bg-info text-white  '>
     <div class="row">
               <div class="col-lg-4 mt-auto ">
