@@ -14,6 +14,7 @@ class CreateHomeCretingImpact extends Migration
     public function up()
     {
         Schema::create('home_creting_impact', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string('heading');
             $table->string('content',2000);
             $table->mediumText('image');

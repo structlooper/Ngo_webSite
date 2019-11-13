@@ -160,29 +160,34 @@
 
     <!-- Cards portion for informations.............................. -->
     <h1 class='display-4  rounded pl-5 text-center text-white'style="background-color:#6d7993;  ">Creating Impact</h1>
-    <div class='container bg-info text-white  '>
+    <div class='container bg- text-white  '>
     <div class="row">
-              <div class="col-lg-4 mt-auto ">
+
+      @foreach ($home_creating_impact_datas as $impact_data)
+          @if ($impact_data->id % 2 == 0)
+          <div class="col-lg-4 my-auto bg-info text-white mx-auto  border">
               <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-            alt="Card image cap">
-                    <h2>Education for every child</h2>
-                      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                        <p><a class="btn btn-warning" href="#" role="button">View details »</a></p>
+            src="{{asset('uploades/HomePage/CreatingImpact\\') . $impact_data->image}}"
+            alt="Card image cap" height='250px'>
+                    <h2>{{ $impact_data->heading }}</h2>
+                    <div class="p2">{!! $impact_data->content !!} </div>
+              </div>          
+              
+          @else
+              
+              <div class="col-lg-4 my-auto bg-white text-dark mx-auto border   ">
+                  <img class="card-img-top"
+                  src="{{asset('uploades/HomePage/CreatingImpact\\') . $impact_data->image}}"
+                  alt="Card image cap" height='250px'>
+                <h2> {{ $impact_data->heading }}</h2>
+                <div class="p2">{!! $impact_data->content !!} </div>
               </div>
-
-              <div class="col-lg-4 mt-auto bg-white text-dark pt-2 my-1">
-              <img class="card-img-top "
-            src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-            alt="Card image cap">
-                        <h2>Feeding the hungry people</h2>
-                        <p >Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                        <p><a class="btn btn-info" href="#" role="button">View details »</a></p>
-              </div>
-
+              
+          @endif
               
           
-          </div>
+    @endforeach   
+    </div>
       
       </div>
     
@@ -195,12 +200,19 @@
 
 <style>
   .p1 {
-    /* width: 80%; */
+    
     height: 200px;
-    white-space:unset;
-    overflow:scroll;
+    white-space:normal;
+    overflow:auto;
     text-overflow: ellipsis;
-    /* background-color: whitesmoke; */
+    
+  }
+  .p2{
+    height: 150px;
+    white-space:normal;
+    overflow:auto;
+    /* text-overflow: ellipsis; */
+  }
 }</style>
 
 
