@@ -13,31 +13,27 @@
       <!-- SLIDE COROUSEL.................................... -->
       <div class="container-">
           <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            
             <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-
+              @foreach ($home_slide_datas->take(3) as $slide_data)
+              <?php $pos=1 ?>
+            <li data-target="#carouselExampleCaptions" data-slide-to="Slide image {{$pos}}" class=" @if($loop->first) active @endif"></li>
+              <?php $pos++ ?>
+              @endforeach
                   </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item">
-                      <img src="images/img1.jpg" class="d-block w-100" alt="First slide" width='1146px' height='450px'>
+                    <?php $pos=1 ?>
+                    @foreach ($home_slide_datas->take(3) as $slide_data)
+                    <div class="carousel-item @if($loop->first) active @endif">
+                    <img src="{{asset('uploades/HomePage/main_slide\\') . $slide_data->image}}" class="d-block w-100" alt="Slide image {{$pos}}" width='1146px' height='450px'>
                         <div class="carousel-caption d-none d-md-block bg-transparent text-dark">
-                          <h5>Information about image</h5>
+                        <h5 class="display-4 text-light">{{$slide_data->content}}</h5>
                         </div>
                     </div>
-                <div class="carousel-item">
-                    <img src="images/img4.png" class="d-block w-100" alt="Second slide" width='1146px' height='450px'>
-                    <div class="carousel-caption d-none d-md-block bg-transparent text-dark">
-                      <h5>Information about image_2</h5>
-                    </div>
-                </div>
-                <div class="carousel-item active">
-                      <img src="images/img3.jpg" class="d-block w-100" alt="Third slide" width='1146px' height='450px'>
-                      <div class="carousel-caption d-none d-md-block bg-transparent text-dark">
-                        <h5>Information about image_3</h5>
-                      </div>
-                    </div>
+                    <?php $pos++ ?>
+                    @endforeach
+
+                
               </div>
               <a class="carousel-control-prev bg-dark" href="#carouselExampleCaptions" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon " aria-hidden="true"></span>
@@ -57,14 +53,21 @@
                     
                     <!-- features assment informer........... -->
                         <div class="row featurette">
+                          @foreach ($home_about_ngo_datas as $about_ngo_data)
+                              
+                          @if ($loop->last)
+                          
                           <div class="col-md-7">
-                            <h2 class="featurette-heading">About NGO_name Foundation </h2><span class="text-muted">Since @2016</span>
-                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                                
+                            <h2 class="featurette-heading">{{$about_ngo_data->heading}}</h2><span class="text-muted">Since @2016</span>
+                            <p class="lead">{!! $about_ngo_data->content !!}</p>
                           </div>
                           <div class="col-md-5 ">
-                          <img src="images/img2.jpg" alt=""  width='450px' height='400px'>
-
-                        </div>
+                            <img src="{{asset('uploades/HomePage/AboutNgoImage\\') . $about_ngo_data->image}}" alt="image"  width='450px' height='400px'>
+                            
+                          </div>
+                          @endif
+                          @endforeach
                         </div>
                     <br>
                   
