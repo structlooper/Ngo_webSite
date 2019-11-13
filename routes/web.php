@@ -79,4 +79,13 @@ Route::group(['middleware' => ['auth','Admin']], function () {
     Route::get('/donateEdit','DonateEditController@donateEdit');
     Route::post('/donateDataSave' , 'DonateEditController@donateDataSave')->name('donatePageDataSave');
     
+
+    Route::get('/homepageEdit' ,'HomePageEditController@view');
+    Route::post('/homeSlideSave','HomePageEditController@homeSlideSave')->name('homeSlideSave');
+    Route::post('/homeAboutNgoDataSave','HomePageEditController@homeAboutNgoDataSave')->name('homeAboutNgoDataSave');
+    Route::post('/homeEducationSlideSave','HomePageEditController@homeEducationSlideSave')->name('homeEducationSlideSave');
+    Route::post('/homeHealthSlideSave','HomePageEditController@homeHealthSlideSave')->name('homeHealthSlideSave');
+    Route::post('/homeCretingImpactSave','HomePageEditController@homeCretingImpactSave')->name('homeCretingImpactSave');
+
+
 });
