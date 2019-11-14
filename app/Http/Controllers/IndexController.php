@@ -8,6 +8,7 @@ use App\homeHealthSlide;
 use App\homeAboutNgoData;
 use App\homeCretingImpact;
 use App\homeEducationSide;
+use App\NgoContactDetails;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -20,11 +21,13 @@ class IndexController extends Controller
         $home_creating_impact_datas = homeCretingImpact::all();
 
         return view('index.index')->with('home_slide_datas',$home_slide_datas)->with('home_about_ngo_datas',$home_about_ngo_datas)->with('home_education_slide_datas',$home_education_slide_datas)->with('home_health_slide_datas',$home_health_slide_datas)->with('home_creating_impact_datas',$home_creating_impact_datas);
+
 }
 
 
     public function contact(){
-        return view('index.contact');
+        $ngo_contact_details = NgoContactDetails::all();
+        return view('index.contact')->with('ngo_contact_details',$ngo_contact_details);
     }
 
     public function donate(){
