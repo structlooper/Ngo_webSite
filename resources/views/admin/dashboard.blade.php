@@ -7,7 +7,7 @@
 
 @section('content')
         <div class="container border">
-                 <h1>Hey!! </h1><br> <h3> Welcome to dashboard <br> now, you can custmize your site's contents</h3>
+                 <h1>Hey!! </h1><br> <h3> Welcome to dashboard <br> now, you can customize your site's contents</h3>
         </div> 
 @endsection
 
