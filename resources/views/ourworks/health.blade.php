@@ -66,10 +66,12 @@ Health | keeping everyone safe
                       <div class='row text-dark '>
                       @foreach ($specificDatas as $specificData)
                           
-                      <div class="card col-lg-3 mx-auto bg-light my-2" style="width: 18rem;">
+                      <div class="card col-lg-4 mx-auto bg-light my-2" style="width: 18rem;">
                               <img class="card-img-top" src="{{asset('uploades/ourWork/health/specificWorkImage\\') . $specificData->image}}" alt="Card image cap">
                               <div class="card-body">
+                                <div class="p2">
                                   <p class="card-text">{!!$specificData->content!!} </p>
+                                </div>
                               </div>
                           </div>                  
                           @endforeach
@@ -86,7 +88,16 @@ Health | keeping everyone safe
 
 
 
-
+@section('script_value')
+<style>
+    .p2{
+        height: 250px;
+        white-space:normal;
+        overflow:auto;
+        /* text-overflow: ellipsis; */
+      }
+    </style>   
+@endsection
 
  
 

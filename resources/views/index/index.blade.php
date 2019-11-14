@@ -7,7 +7,6 @@
 @endsection
 
 
-
 @section('content_str')
 <div class='content'>
       <!-- SLIDE COROUSEL.................................... -->
@@ -17,7 +16,7 @@
             <ol class="carousel-indicators">
               @foreach ($home_slide_datas->take(3) as $slide_data)
               <?php $pos=1 ?>
-            <li data-target="#carouselExampleCaptions" data-slide-to="Slide image {{$pos}}" class=" @if($loop->first) active @endif"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="Slide image {{$pos}}" class=" @if($loop->last) active @endif"></li>
               <?php $pos++ ?>
               @endforeach
                   </ol>
@@ -82,7 +81,7 @@
             <div class='row'>
             
               <!-- Education Field....................... -->
-              <div class='col-lg-6    ml-auto mt-auto pt-auto '>
+              <div class='col-lg-6    my-auto mx-auto pt-auto '>
                 <div class="container border bg-white">
                   <h3>Education</h3>
                   <div id="carouselExampleControls1" class="carousel slide " data-ride="carousel">

@@ -1,6 +1,5 @@
 @yield('footer_str')
-
-<div class=' border border-dark ml-1 border-bottom-0 rounded text-dark' style="background-color:#7CC7F3;  ">
+<div class=' border border-dark ml-1 border-bottom-0 rounded text-white' style="background-color:#3C4147;  ">
  
         <footer class="page-footer font-small stylish-color-light pt-4">
 
@@ -15,7 +14,9 @@
 
 
                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">NGO_NAME</h5>
-                <p>ngo_ADDRESS<br>test area test city</p>
+                <p>testing_address 
+                    <br>
+                    testing area <br>New Delhi - 110059</p>
 
               </div>
 
@@ -124,4 +125,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
- 
+  </div>
+</body>
+</html> 

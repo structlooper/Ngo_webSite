@@ -83,14 +83,6 @@
 <hr>
 @endsection
 
-
-
-
-
-
-
- 
-
 @section('footer_str')
 
 @endsection
