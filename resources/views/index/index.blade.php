@@ -165,7 +165,7 @@
 
       @foreach ($home_creating_impact_datas as $impact_data)
           @if ($impact_data->id % 2 == 0)
-          <div class="col-lg-4 my-auto bg-info text-white mx-auto  border">
+          <div class="col-lg-4 my-auto bg-info text-white mx-auto py-2 border">
               <img class="card-img-top"
             src="{{asset('uploades/HomePage/CreatingImpact\\') . $impact_data->image}}"
             alt="Card image cap" height='250px'>
@@ -175,7 +175,7 @@
               
           @else
               
-              <div class="col-lg-4 my-auto bg-white text-dark mx-auto border   ">
+              <div class="col-lg-4 my-auto bg-white text-dark mx-auto border py-2  ">
                   <img class="card-img-top"
                   src="{{asset('uploades/HomePage/CreatingImpact\\') . $impact_data->image}}"
                   alt="Card image cap" height='250px'>

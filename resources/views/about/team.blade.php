@@ -40,7 +40,9 @@
   </div>
   
   <div class='container-fluid rounded border'>
-    <h1 class="display-4 ml-4 container">Education Department</h1>
+    
+    <h3 class='display-4  rounded pl-5 text-center text-white' style="background-color:#6d7993;  ">Education Department</h3>
+
     <div class='row'>
       @foreach ($memberDatas as $memberData)
       @if ($memberData->department_name === "education")
@@ -58,7 +60,8 @@
      
      
      <div class='container-fluid border mt-2 border-rounded'>
-       <h1 class="display-4 ml-4 container">Health Department</h1>
+       
+       <h3 class='display-4  rounded pl-5 text-center text-white' style="background-color:#6d7993;  ">Health Department</h3>
        <div class='row'>
          @foreach ($memberDatas as $memberData)
          @if ($memberData->department_name === "health")
@@ -76,7 +79,8 @@
                
       
       <div class='container-fluid rounded border mt-2'>
-          <h1 class="display-4 ml-4 container">Women Enpowerment Department</h1>
+          
+          <h3 class='display-4  rounded pl-5 text-center text-white' style="background-color:#6d7993;  ">Women Enpowerment Department</h3>
           <div class='row'>
               @foreach ($memberDatas as $memberData)
               @if ($memberData->department_name === "women_enpowerment")

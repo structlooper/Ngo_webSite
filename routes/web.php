@@ -86,6 +86,9 @@ Route::group(['middleware' => ['auth','Admin']], function () {
     Route::post('/homeEducationSlideSave','HomePageEditController@homeEducationSlideSave')->name('homeEducationSlideSave');
     Route::post('/homeHealthSlideSave','HomePageEditController@homeHealthSlideSave')->name('homeHealthSlideSave');
     Route::post('/homeCretingImpactSave','HomePageEditController@homeCretingImpactSave')->name('homeCretingImpactSave');
-
+    
+    
+    Route::get('/contactPageEdit', 'ContactPageEditController@contact');
+    Route::post('/contactDetailsSave','ContactPageEditController@contactDetailsSave')->name('contactDetailsSave');
 
 });

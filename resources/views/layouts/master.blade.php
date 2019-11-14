@@ -83,8 +83,14 @@
           </li>
           <li>
               <a href="/donateEdit">
-                <i class="now-ui-icons ui-1_email-85"></i>
+                <i class="now-ui-icons business_money-coins"></i>
                 <b>Donate Page</b>
+              </a>
+            </li>
+          <li>
+              <a href="/contactPageEdit">
+                <i class="now-ui-icons ui-1_email-85"></i>
+                <b>Contact page</b>
               </a>
             </li>
             <li class="ml-4 text-success border-bottom">
