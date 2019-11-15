@@ -10,7 +10,7 @@ Women Enpowerment | she can do everything
 
 @section('content_str')
 <div class="content">
-    <div class="container-fluid ">
+    {{-- <div class="container-fluid ">
         <div id="carouselExampleControls" class="carousel slide rounded" data-ride="carousel">
                 <div class="carousel-inner">
                         @foreach ($slideDatas->take(3) as $data)
@@ -36,10 +36,10 @@ Women Enpowerment | she can do everything
             <span class="sr-only">Next</span>
           </a>
         </div>
-      </div>
-          <hr>
+    </div> --}}
+          {{-- <hr> --}}
           @foreach ($sideDatas->take(1) as $sidedata)
-          <div class='bg-secondary text-light'>
+          <div class=' '>
                 <div class='container py-2 ' >
                       <div class="row featurette">
                           <div class="col-md-7">
@@ -60,9 +60,9 @@ Women Enpowerment | she can do everything
                    <h1 class="display-4 ml-4 ">Works in Women Enpowerment Field</h1>
               </div>
           </div>
-              <div class="position bg-secondary" >
+              <div class="position " >
                   <div class=" container  ">
-                  <div class='container  text-light'>
+                  <div class='container'>
                       <div class='row text-dark '>
                       @foreach ($specificDatas as $specificData)
                           
