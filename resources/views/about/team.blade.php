@@ -11,7 +11,7 @@
 @section('content_str')
 <div class="content">
     <div class="container-fluid">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        {{-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             @foreach ($datas->take(3) as $data)
                 
@@ -35,6 +35,26 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
+        </div> --}}
+
+        <div class="header-image">
+            <div class="container-fluid ">
+              <div class="row">
+                <div class="col-lg-7">
+
+                  <img class="d-block- " src="/images/team_head.png" alt="Slide Image" width='px' height='400px'>
+                </div>
+              <div class="col-lg-5">
+                <h1 class="text-center ml-5 mt-4 border-bottom">Meet Our Team</h1>
+                <div class="container">
+
+                  <p>According to the team approach to leadership, a team is a type of organizational group of people that are members. A team is composed of members who are dependent on each other, work towards interchangeable achievements, and share common attainments. A team works as a whole together to achieve certain things.
+                    ‎Team building · ‎Team composition · ‎Team effectiveness · ‎Teamwork
+                    People also ask</p>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
         <hr>
   </div>

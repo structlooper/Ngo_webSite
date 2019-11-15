@@ -10,7 +10,7 @@ Health | keeping everyone safe
 
 @section('content_str')
 <div class="content">
-    <div class="container-fluid ">
+    {{-- <div class="container-fluid ">
         <div id="carouselExampleControls" class="carousel slide rounded" data-ride="carousel">
                 <div class="carousel-inner">
                         @foreach ($slideDatas->take(3) as $data)
@@ -37,7 +37,7 @@ Health | keeping everyone safe
           </a>
       </div>
     </div>
-    <hr>
+    <hr> --}}
     @foreach ($sideDatas->take(1) as $sidedata)
           <div class=' text-dark bg-light'>
                 <div class='container py-2 ' >
@@ -60,7 +60,7 @@ Health | keeping everyone safe
                    <h1 class="display-4 ml-4 ">Works in Health Field</h1>
               </div>
           </div>
-              <div class="position bg-secondary" >
+              <div class="position " >
                   <div class=" container  ">
                   <div class='container  text-light'>
                       <div class='row text-dark '>

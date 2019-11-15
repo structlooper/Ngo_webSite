@@ -10,7 +10,7 @@ Eduction | Learning is must
 
 @section('content_str')
 <div class="content">
-    <div class="container-fluid ">
+    {{-- <div class="container-fluid ">
         <div id="carouselExampleControls" class="carousel slide rounded" data-ride="carousel">
                 <div class="carousel-inner">
                         @foreach ($datas->take(3) as $data)
@@ -36,11 +36,11 @@ Eduction | Learning is must
             <span class="sr-only">Next</span>
           </a>
       </div>
-    </div>
-    <hr>
+    </div> --}}
+    {{-- <hr> --}}
     @foreach ($sideDatas as $sidedata)
         
-    <div style="background-color: rgb(219, 204, 204);">
+    <div >
             <div class='container py-2 ' >
                 <div class="row featurette">
                     <div class="col-md-7">
@@ -55,13 +55,13 @@ Eduction | Learning is must
     </div>
     @endforeach
 
-    <hr>
+    {{-- <hr> --}}
     <div class="bg-warning">
         <div class="container ">
              <h1 class="display-4 ml-4 ">Works in Education Field</h1>
         </div>
     </div>
-        <div class="position bg-secondary" >
+        <div class="position " >
             <div class=" container  ">
             <div class='container  text-light'>
                 <div class='row text-dark '>
