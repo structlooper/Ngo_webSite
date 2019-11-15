@@ -53,13 +53,11 @@
 
                 <ul class="list-unstyled">
                   <li>
-                    <a style="text-color:#717D7E;  " href="/events/events">Events</a>
+                    <a style="text-color:#717D7E;  " href="{{route('events')}}">Events</a>
                   </li>
+                  
                   <li>
-                    <a style="text-color:#717D7E;  " href="/contactUs">Contact us</a>
-                  </li>
-                  <li>
-                    <a style="text-color:#717D7E;  " href="https://gmail.com/">contact@ngo_mail.com</a>
+                  <a style="text-color:#717D7E;  " href="{{route('contact_us')}}">Contact us</a>
                   </li>
                   
                 </ul>

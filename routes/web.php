@@ -23,7 +23,7 @@ Route::get('/aboutus/team','AboutController@team');
 
 
 //  Events.......
-Route::get('/events','EventsController@index');
+Route::get('/events','EventsController@index')->name('events');
 
 
 // our works.......
@@ -38,6 +38,7 @@ Auth::routes();
 Route::post('/donating', 'DonateController@store')->name('donating');
 Route::post('/paytm-callback','DonateController@paytmCallback');
 
+Route::post('/sendMail', 'MailController@send')->name('SendMail');
 
 Route::group(['middleware' => ['auth','Admin']], function () {
     
