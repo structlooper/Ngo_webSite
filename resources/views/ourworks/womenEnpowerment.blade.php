@@ -91,7 +91,7 @@ Women Enpowerment | she can do everything
 @section('script_value')
 <style>
     .p2{
-        height: 250px;
+        height: 150px;
         white-space:normal;
         overflow:auto;
         /* text-overflow: ellipsis; */

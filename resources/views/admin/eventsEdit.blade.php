@@ -11,7 +11,7 @@
                 <div class="container border rounded pt-2">
                     <form method="post"  action="{{ route('eventSlideDataSave')}}" enctype="multipart/form-data" >
                             @csrf
-                            <h2>Slide Details upload</h2>
+                            <h2>Current Events</h2>
                             <div class="col-sm-3 control-label border">
                               <label for="">upload image</label>
                               <div class="col-sm-9 ml-2">
@@ -22,10 +22,10 @@
                             <br>
                                 <div class="form-group clearfix">
                                   <label class="col-sm-3 control-label ">
-                                    Slide image details
+                                    Details
                                   </label>
                                   <div class="col-sm-9">
-                                    <input type="text" class="heading-1-text form-control bg-light " placeholder="Event Details" maxlength="255"    name='content' >
+                                    <textarea name="content" id="cnt1" class=" summernote " ></textarea>
                                   </div>
                                 </div>
                                 <br>
@@ -211,4 +211,5 @@
                
                
   </script>
+  
 @endsection

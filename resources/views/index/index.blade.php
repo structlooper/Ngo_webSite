@@ -56,13 +56,13 @@
                               
                           @if ($loop->last)
                           
-                          <div class="col-md-7">
+                          <div class="col-md-6">
                                 
-                            <h2 class="featurette-heading">{{$about_ngo_data->heading}}</h2><span class="text-muted">Since @2016</span>
-                            <p class="lead">{!! $about_ngo_data->content !!}</p>
+                            <h2 class="featurette-heading border-bottom border-dark">{{$about_ngo_data->heading}}</h2><span class="text-muted">Since @2016</span>
+                            <p class="lead ">{!! $about_ngo_data->content !!}</p>
                           </div>
-                          <div class="col-md-5 ">
-                            <img src="{{asset('uploades/HomePage/AboutNgoImage\\') . $about_ngo_data->image}}" alt="image"  width='450px' height='400px'>
+                          <div class="col-md-6 ">
+                            <img src="{{asset('uploades/HomePage/AboutNgoImage\\') . $about_ngo_data->image}}" alt="image"   height='400px'>
                             
                           </div>
                           @endif
@@ -91,7 +91,7 @@
                       
                       <div class="carousel-item  @if($loop->first) active @endif">
 
-                        <img class="card-img-top"
+                        <img class="card-img-top border-top"
                       src="{{asset('uploades/HomePage/ourWork/EductionSlideImage\\') . $education_slide_data->image}}"
                       alt="Card image cap" width='450px' height='400px'>
                       
@@ -126,7 +126,7 @@
                     <div class="carousel-inner">
                       @foreach ($home_health_slide_datas->take(3) as $health_slide_data)
                      <div class="carousel-item @if($loop->first)active @endif">
-                        <img class="card-img-top"
+                        <img class="card-img-top border-top"
                       src="{{asset('uploades/HomePage/ourWork/HealthSlideImage\\') . $health_slide_data->image}}"
                       alt="Card image cap" width='450px' height='384px'>
                       <div class="carousel-details text-left">
@@ -160,8 +160,7 @@
     <!-- Cards portion for informations.............................. -->
     <h1 class='display-4  rounded pl-5 text-center text-white'style="background-color:#6d7993;  ">Creating Impact</h1>
     <div class='container bg- text-white  '>
-    <div class="row">
-
+      <div class="row">
       @foreach ($home_creating_impact_datas as $impact_data)
           @if ($impact_data->id % 2 == 0)
           <div class="col-lg-4 my-auto bg-info text-white mx-auto py-2 border">
@@ -170,25 +169,19 @@
             alt="Card image cap" height='250px'>
                     <h2>{{ $impact_data->heading }}</h2>
                     <div class="p2">{!! $impact_data->content !!} </div>
-              </div>          
-              
+              </div>       
           @else
-              
               <div class="col-lg-4 my-auto bg-white text-dark mx-auto border py-2  ">
                   <img class="card-img-top"
                   src="{{asset('uploades/HomePage/CreatingImpact\\') . $impact_data->image}}"
                   alt="Card image cap" height='250px'>
                 <h2> {{ $impact_data->heading }}</h2>
                 <div class="p2">{!! $impact_data->content !!} </div>
-              </div>
-              
+              </div> 
           @endif
-              
-          
-    @endforeach   
-    </div>
-      
+        @endforeach   
       </div>
+    </div>
     
 
 

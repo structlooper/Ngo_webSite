@@ -38,7 +38,7 @@ Auth::routes();
 Route::post('/donating', 'DonateController@store')->name('donating');
 Route::post('/paytm-callback','DonateController@paytmCallback')->name('paytm-callback');
 
-Route::post('/sendMail', 'MailController@send')->name('SendMail')->name('sendMail');
+Route::post('/sendMail', 'MailController@send')->name('SendMail');
 
 Route::group(['middleware' => ['auth','Admin']], function () {
     

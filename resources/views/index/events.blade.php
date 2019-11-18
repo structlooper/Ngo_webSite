@@ -10,42 +10,36 @@
 
 @section('content_str')
 <div class="content">
-  <h3 class='display-4  rounded pl-5 text-center text-white' style="background-color:#6d7993;  ">Current events</h3>
-  <div class='container'>
-      <div class="container-fluid">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              @foreach ($datas->take(3) as $data)
-                  
-              <div class="carousel-item @if($loop->first) active @endif">
-                  <img class="d-block w-100" src="{{asset('uploades/events/current_event_slide\\') . $data->image}}" alt="First slide" width='1146px' height='450px'>
-                  <div class="container">
-                    <div class="carousel-details text-center">
-                    <h1>{{$data->content}}</h1>
-                    </div>
-                  </div>
-              </div>
-              @endforeach
-              
-            </div>
-           
-            <a class="carousel-control-prev bg-dark" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only ">Previous</span>
-            </a>
-            <a class="carousel-control-next bg-dark" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+      <h3 class='display-4  rounded pl-5 text-center text-white' style="background-color:#6d7993;  ">Current events</h3>
+     
+      <div class='container bg- text-white  '>
+          <div class="row">
+          @foreach ($datas as $data)
+              @if ($data->id % 2 == 0)
+              <div class="col-md-4 my-auto bg-info text-white mx-auto mt-2 border">
+                  <img class="card-img-top"
+                src="{{asset('uploades/events/current_event_slide\\') . $data->image}}"
+                alt="Card image cap" height='250px'>
+                        <h2>{!! substr($data->content, 0, 10)!!}</h2>
+                        <div class="p2">{!! $data->content !!} </div>
+                  </div>       
+              @else
+                  <div class="col-md-4 my-auto bg-white text-dark mx-auto border">
+                      <img class="card-img-top"
+                      src="{{asset('uploades/events/current_event_slide\\') . $data->image}}"
+                      alt="Card image cap" height='250px'>
+                    <h2> {!! substr($data->content, 0, 10)!!}</h2>
+                    <div class="p2">{!! $data->content !!} </div>
+                  </div> 
+              @endif
+            @endforeach   
           </div>
-          <hr>
-    </div>
-  </div>
+        </div>
   
   
-        <hr>
+        <br><br>
         <h3 class='display-4  rounded pl-5 text-center text-white' style="background-color:#6d7993;  ">Upcoming events</h3>
-  <div class="container " style="background-color:#d5d5d5;  ">
+  <div class="container " style="background-color:#DCD0C0;   ">
       <div class="row">
         <div class="col-lg-12 border">
                 <table class="table ">
@@ -83,7 +77,7 @@
       </div>
     </div>  
        
-        <hr>
+        <br><br>
         <h3 class='display-4  rounded pl-5 text-center text-white' style="background-color:#6d7993;  ">Past events</h3>
     <div class="container" style="background-color:#DCD0C0;  ">
    <div class="row">
@@ -127,7 +121,14 @@
 @endsection
 
 
-
+<style>
+    .p2{
+      height: 150px;
+      white-space:normal;
+      overflow:auto;
+      /* text-overflow: ellipsis; */
+    }
+    </style>
 
 
 
