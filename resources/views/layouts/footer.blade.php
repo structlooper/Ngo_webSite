@@ -75,13 +75,13 @@
 
                 <ul class="list-unstyled">
                   <li class='pt-0'>
-                    <a style="text-color:#717D7E;  " href="#!"><img src="/icons/facebook.png" width='20px' height='20px'alt=""> facebook</a>
+                    <a style="text-color:#717D7E;  " href="#!"><img src="{{asset('/icons/facebook.png')}}" width='20px' height='20px'alt="fb"> facebook</a>
                   </li>
                   <li class='pt-1'>
-                    <a style="text-color:#717D7E;  " href="#!"><img src="/icons/twitter.png" width='20px' height='20px' alt=""> twitter</a>
+                    <a style="text-color:#717D7E;  " href="#!"><img src="{{asset('/icons/twitter.png')}}" width='20px' height='20px' alt="tw"> twitter</a>
                   </li>
                   <li class='pt-1'>
-                    <a style="text-color:#717D7E;  " href="#!"><img src="/icons/linkedin.png" width='20px' height='20px' alt=""> linkedin</a>
+                    <a style="text-color:#717D7E;  " href="#!"><img src="{{asset('/icons/linkedin.png')}}" width='20px' height='20px' alt="lN"> linkedin</a>
                   </li>
                   
                 </ul>
@@ -103,7 +103,7 @@
               <h5 class="mb-1 ">Support us!</h5>
             </li>
             <li class="list-inline-item">
-            <a href="{{route('dontePage')}}" class="btn btn-success btn-rounded">Donate us</a>
+            <a href="{{route('dontePage')}}" type="button" class="btn btn-success ml-3">Donate us</a>
             </li>
           </ul>
 

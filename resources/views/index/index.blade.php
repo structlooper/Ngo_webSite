@@ -58,11 +58,11 @@
                           
                           <div class="col-md-6">
                                 
-                            <h2 class="featurette-heading border-bottom border-dark">{{$about_ngo_data->heading}}</h2><span class="text-muted">Since @2016</span>
+                            <h2 class="featurette-heading border-bottom border-secondary">{{$about_ngo_data->heading}}</h2><span class="text-muted">Since @2016</span>
                             <p class="lead ">{!! $about_ngo_data->content !!}</p>
                           </div>
                           <div class="col-md-6 ">
-                            <img src="{{asset('uploades/HomePage/AboutNgoImage\\') . $about_ngo_data->image}}" alt="image"   height='400px'>
+                            <img src="{{asset('uploades/HomePage/AboutNgoImage\\') . $about_ngo_data->image}}" alt="image" width="650"  height='400px'>
                             
                           </div>
                           @endif
@@ -89,9 +89,9 @@
                       @foreach ($home_education_slide_datas->take(3) as $education_slide_data)
                           
                       
-                      <div class="carousel-item  @if($loop->first) active @endif">
+                      <div class="carousel-item @if($loop->first) active @endif">
 
-                        <img class="card-img-top border-top"
+                        <img class="card-img-top border-top pb-3"
                       src="{{asset('uploades/HomePage/ourWork/EductionSlideImage\\') . $education_slide_data->image}}"
                       alt="Card image cap" width='450px' height='400px'>
                       
