@@ -10,34 +10,7 @@ Eduction | Learning is must
 
 @section('content_str')
 <div class="content">
-    {{-- <div class="container-fluid ">
-        <div id="carouselExampleControls" class="carousel slide rounded" data-ride="carousel">
-                <div class="carousel-inner">
-                        @foreach ($datas->take(3) as $data)
-                            
-                        <div class="carousel-item @if($loop->first) active @endif">
-                          
-                          <img class="d-block w-100" src="{{asset('uploades/ourWork/education/slideImage\\') . $data->image}}" alt="First slide" width='1146px' height='450px'>
-                              <div class="container">
-                                <div class="carousel-caption text-center">
-                                <h1>{{$data->content}}</h1>
-                                </div>
-                              </div>
-                        </div>
-                        @endforeach
-                        
-                      </div>
-          <a class="carousel-control-prev bg-dark" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only ">Previous</span>
-          </a>
-          <a class="carousel-control-next bg-dark" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-      </div>
-    </div> --}}
-    {{-- <hr> --}}
+    
     @foreach ($sideDatas as $sidedata)
         
     <div >
@@ -55,7 +28,6 @@ Eduction | Learning is must
     </div>
     @endforeach
 
-    {{-- <hr> --}}
     <div class="bg-warning">
         <div class="container ">
              <h1 class="display-4 ml-4 ">Works in Education Field</h1>
@@ -94,7 +66,7 @@ Eduction | Learning is must
 @section('script_value')
 <style>
 .p2{
-    height: 250px;
+    height: 150px;
     white-space:normal;
     overflow:auto;
     /* text-overflow: ellipsis; */
