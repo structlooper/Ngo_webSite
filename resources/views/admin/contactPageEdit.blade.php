@@ -26,7 +26,7 @@
                                         <h4>NGO PHONE NUMBER</h4> 
                                 </label>
                                 <div class="col-sm-9">
-                                  <input type="number" class=" form-control bg-light "  maxlength="10"    name="number" >
+                                  <input required type="number" class=" form-control bg-light "  maxlength="10"    name="number" >
                                 </div>
                               </div>
                           <br>
@@ -35,7 +35,7 @@
                                  <h4> NGO MAIL ADDRESS</h4> 
                                 </label>
                                 <div class="col-sm-9">
-                                  <input type="email" class="email-1-text form-control bg-light "  maxlength="25"    name="email" >
+                                  <input required type="email" class="email-1-text form-control bg-light "  maxlength="25"    name="email" >
                                 </div>
                               </div>
                           <br>
