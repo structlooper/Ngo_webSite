@@ -17,7 +17,7 @@
                     <div class="col-sm-3 control-label border">
                       <label for="">upload image</label>
                       <div class="col-sm-9 ml-2">
-                        <input type="file" name="slide_image" />
+                        <input required type="file" name="slide_image" />
                         <label class="">Select a file to upload</label> <br>                               
                       </div>
                     </div>
@@ -27,7 +27,7 @@
                             Slide image details
                           </label>
                           <div class="col-sm-9">
-                            <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"    name='slide_detail' >
+                            <input required type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"    name='slide_detail' >
                           </div>
                         </div>
                         <br>
@@ -46,7 +46,7 @@
                     <div class="col-sm-3 control-label border">
                       <label for="">upload image</label>
                       <div class="col-sm-9 ml-2">
-                        <input type="file" name="member_picture" />
+                        <input required type="file" name="member_picture" />
                         <label class="">Select a file to upload</label> <br>                               
                       </div>
                     </div>
@@ -56,7 +56,7 @@
                             Departmen name
                           </label>
                           <div class="col-sm-9">
-                            {{-- <input type="text" class="heading-1-text form-control bg-light " placeholder="Department Name"    name='department_name' > --}}
+                            {{-- <input required type="text" class="heading-1-text form-control bg-light " placeholder="Department Name"    name='department_name' > --}}
                             <select class="form-control bg-light" name="department_name" >
                               <option value="" selected>Select Department</option>
                                 <option value="education">Education</option>
@@ -71,7 +71,7 @@
                             Name of member
                           </label>
                           <div class="col-sm-9">
-                            <input type="text" class="heading-1-text form-control bg-light " placeholder="Member Name" maxlength="20"    name='member_name' >
+                            <input required type="text" class="heading-1-text form-control bg-light " placeholder="Member Name" maxlength="20"    name='member_name' >
                           </div>
                         </div>
                         <br>
@@ -80,7 +80,7 @@
                             Email
                           </label>
                           <div class="col-sm-9">
-                            <input type="text" class="heading-1-text form-control bg-light " placeholder="Email"  name='member_email' >
+                            <input required type="text" class="heading-1-text form-control bg-light " placeholder="Email"  name='member_email' >
                           </div>
                         </div>
                         <br>
@@ -90,7 +90,7 @@
                             More details
                           </label>
                           <div class="col-sm-9">
-                            <input type="text" class="heading-1-text form-control bg-light " placeholder="Optional"  name="member_more_details" >
+                            <input required type="text" class="heading-1-text form-control bg-light " placeholder="Optional"  name="member_more_details" >
                           </div>
                         </div>
                         <br>

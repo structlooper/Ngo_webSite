@@ -15,7 +15,7 @@
                             <div class="col-sm-3 control-label border">
                               <label for="">upload image</label>
                               <div class="col-sm-9 ml-2">
-                                <input type="file" name="slide_image" />
+                                <input required type="file" name="slide_image" />
                                 <label class="">Select a file to upload</label> <br>                               
                               </div>
                             </div>
@@ -45,7 +45,7 @@
                               Event Name
                             </label>
                             <div class="col-sm-9">
-                              <input type="text" class="heading-1-text form-control bg-light " placeholder="Event Name" maxlength="100"    name="event_name" >
+                              <input required type="text" class="heading-1-text form-control bg-light " placeholder="Event Name" maxlength="100"    name="event_name" >
                             </div>
                           </div>
                           <br>
@@ -63,7 +63,7 @@
                                   Place
                                 </label>
                                 <div class="col-sm-9">
-                                  <input type="text" class="heading-1-text form-control bg-light " placeholder="Enter place and & Address" maxlength="50"    name="place" >
+                                  <input required type="text" class="heading-1-text form-control bg-light " placeholder="Enter place and & Address" maxlength="50"    name="place" >
                                 </div>
                               </div>
                               
@@ -73,7 +73,7 @@
                                       <h6 class="pt-2">From</h6>
                                       </label>
                                       <div class="col-sm-9 ">
-                                            <input type="date" id="myDate" name='duration_start' class=" bg-light form-control">
+                                            <input required type="date" id="myDate" name='duration_start' class=" bg-light form-control">
                                            
                                       </div>
                                   </div>
@@ -83,7 +83,7 @@
                                       <h6>to</h6>
                                       </label>
                                       <div class="col-sm-9">
-                                            <input type="date" id="myDate" name='duration_end' class=" bg-light form-control" >
+                                            <input required type="date" id="myDate" name='duration_end' class=" bg-light form-control" >
                                            
                                       </div>
                                   </div>
@@ -103,7 +103,7 @@
                               Event Name
                             </label>
                             <div class="col-sm-9">
-                              <input type="text" class="heading-1-text form-control bg-light " placeholder="Event Name" maxlength="100"    name="event_name" >
+                              <input required type="text" class="heading-1-text form-control bg-light " placeholder="Event Name" maxlength="100"    name="event_name" >
                             </div>
                           </div>
                           <br>
@@ -121,7 +121,7 @@
                                   Place
                                 </label>
                                 <div class="col-sm-9">
-                                  <input type="text" class="heading-1-text form-control bg-light " placeholder="Enter place and & Address" maxlength="50"    name="place" >
+                                  <input required type="text" class="heading-1-text form-control bg-light " placeholder="Enter place and & Address" maxlength="50"    name="place" >
                                 </div>
                               </div>
                               
@@ -131,7 +131,7 @@
                                       <h6 class="pt-2">From</h6>
                                       </label>
                                       <div class="col-sm-9 ">
-                                            <input type="date" id="myDate" name='duration_start' class=" bg-light form-control">
+                                            <input required type="date" id="myDate" name='duration_start' class=" bg-light form-control">
                                            
                                       </div>
                                   </div>
@@ -141,7 +141,7 @@
                                       <h6>to</h6>
                                       </label>
                                       <div class="col-sm-9">
-                                            <input type="date" id="myDate" name='duration_end' class=" bg-light form-control" >
+                                            <input required type="date" id="myDate" name='duration_end' class=" bg-light form-control" >
                                            
                                       </div>
                                   </div>

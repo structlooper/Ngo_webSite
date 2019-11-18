@@ -15,7 +15,7 @@
                             <div class="col-sm-3 control-label border">
                               <label for="">upload image</label>
                               <div class="col-sm-9 ml-2">
-                                <input type="file" name="slide_image" />
+                                <input required type="file" name="slide_image" />
                                 <label class="">Select a file to upload</label> <br>                               
                               </div>
                             </div>
@@ -25,7 +25,7 @@
                                     Slide image details
                                   </label>
                                   <div class="col-sm-9">
-                                    <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"    name='content' >
+                                    <input required  type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"    name='content' >
                                   </div>
                                 </div>
                                 <br>
@@ -47,7 +47,7 @@
                               Heading 
                             </label>
                             <div class="col-sm-9">
-                              <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"    name="heading" >
+                              <input required type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 100 char" maxlength="100"    name="heading" >
                             </div>
                           </div>
                           <br>
@@ -63,7 +63,7 @@
                           <div class="col-sm-3 control-label border">
                             <label for="">upload image</label>
                             <div class="col-sm-9 ml-2">
-                              <input type="file" name="image" />
+                              <input required type="file" name="image" />
                               <label class="">Select a file to upload</label> <br>
                               
                                   
@@ -85,7 +85,7 @@
                         <div class="col-sm-3 control-label border">
                           <label for="">upload image</label>
                           <div class="col-sm-9 ml-2">
-                            <input type="file" name="slide_image" />
+                            <input required type="file" name="slide_image" />
                             <label class="">Select a file to upload</label> <br>                               
                           </div>
                         </div>
@@ -95,7 +95,7 @@
                                 Slide Heading
                               </label>
                               <div class="col-sm-9">
-                                <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 30 char" maxlength="30"    name='heading' >
+                                <input required type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 30 char" maxlength="30"    name='heading' >
                               </div>
                             </div>
                         <br>
@@ -121,7 +121,7 @@
                         <div class="col-sm-3 control-label border">
                           <label for="">upload image</label>
                           <div class="col-sm-9 ml-2">
-                            <input type="file" name="slide_image" />
+                            <input required type="file" name="slide_image" />
                             <label class="">Select a file to upload</label> <br>                               
                           </div>
                         </div>
@@ -131,7 +131,7 @@
                                 Slide Heading
                               </label>
                               <div class="col-sm-9">
-                                <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 30 char" maxlength="30"    name='heading' >
+                                <input required type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 30 char" maxlength="30"    name='heading' >
                               </div>
                             </div>
                         <br>
@@ -161,7 +161,7 @@
                         <div class="col-sm-3 control-label border">
                           <label for="">upload image</label>
                           <div class="col-sm-9 ml-2">
-                            <input type="file" name="slide_image" />
+                            <input required type="file" name="slide_image" />
                             <label class="">Select a file to upload</label> <br>                               
                           </div>
                         </div>
@@ -171,7 +171,7 @@
                                 Slide Heading
                               </label>
                               <div class="col-sm-9">
-                                <input type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 30 char" maxlength="30"    name='heading' >
+                                <input required type="text" class="heading-1-text form-control bg-light " placeholder="Heading  max : 30 char" maxlength="30"    name='heading' >
                               </div>
                             </div>
                         <br>
