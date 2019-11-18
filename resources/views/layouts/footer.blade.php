@@ -31,11 +31,11 @@
 
                 <ul class="list-unstyled">
                   <li>
-                    <a style="text-color:#717D7E;  " href="/aboutus/who_we_are">About us</a>
+                    <a style="text-color:#717D7E;  " href="{{route('who_we_are')}}">About us</a>
                   </li>
                   
                   <li>
-                    <a style="text-color:#717D7E;  " href="/aboutus/team">Team</a>
+                    <a style="text-color:#717D7E;  " href="{{route('team')}}">Team</a>
                   </li>
                   
                 </ul>
@@ -57,7 +57,7 @@
                   </li>
                   
                   <li>
-                  <a style="text-color:#717D7E;  " href="{{route('contact_us')}}">Contact us</a>
+                  <a style="text-color:#717D7E;  " href="{{route('contactUs')}}">Contact us</a>
                   </li>
                   
                 </ul>
@@ -103,7 +103,7 @@
               <h5 class="mb-1 ">Support us!</h5>
             </li>
             <li class="list-inline-item">
-              <a href="/donate" class="btn btn-success btn-rounded">Donate us</a>
+            <a href="{{route('dontePage')}}" class="btn btn-success btn-rounded">Donate us</a>
             </li>
           </ul>
 
@@ -114,7 +114,7 @@
 
           <!-- Copyright -->
           <div class="footer-copyright text-center py-3 ">© 2018 Copyright:<br><I>ngo_name</I>@
-            <a href="/" class="text-primary">NGO_NAME.com</a>
+            <a href="{{route('index')}}" class="text-primary">NGO_NAME.com</a>
           </div>
 </div>
 <!-- Optional JavaScript -->

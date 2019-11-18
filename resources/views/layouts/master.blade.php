@@ -32,7 +32,7 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li class=" ">
-            <a href="http://127.0.0.1:8000/dashboard">
+            <a href="{{route('dashboard')}}">
               <i class="now-ui-icons design_app"></i>
               <b>Dashboard</b>
             </a>
@@ -41,7 +41,7 @@
               <h5>Site Contents</h5>      
           </li>             
           <li>
-            <a href="/homepageEdit">
+            <a href="{{route('homepageEdit')}}">
               <i class="now-ui-icons business_bulb-63"></i>
               <b>Home Page Edit</b>
             </a>
@@ -49,46 +49,46 @@
           <li>
           <li>
             <label for="" class="ml-4 text-white"><b> About us Edit</b>
-            <a href="/aboutusEdit">
+            <a href="{{route('aboutusEdit')}}">
               <i class="now-ui-icons ui-2_like"></i>
               <p class="text-white">Who_we_are</p>
             </a>
-            <a href="/aboutusEditTeam">
-              {{-- <i class="now-ui-icons ui-2_like"></i> --}}
+            <a href="{{route('aboutusEditTeam')}}">
+              
               <p class="ml-5 text-white">Our_Team</p>
             </a>
           </label>
           </li>
           <li>
-            <a href="./eventsEdit">
+            <a href="{{route('eventsEdit')}}">
               <i class="now-ui-icons design-2_ruler-pencil"></i>
               <b>Events Edit</b>
             </a>
           </li>
           <li>
             <label class="ml-4 text-white" ><b>Our works edit</b>
-            <a href="./ourWorksEducationEdit">
+            <a href="{{route('ourWorksEducationEdit')}}">
               <i class="now-ui-icons ui-2_settings-90"></i>
               <p class="text-white">Education Edit</p>
             </a>
-            <a href="./ourWorksHealthEdit">
+            <a href="{{route('ourWorksHealthEdit')}}">
              
               <p class="text-white ml-5">Health Edit</p>
             </a>
-            <a href="./ourWorksWomenEnpowermentEdit">
+            <a href="{{route('ourWorksWomenEnpowermentEdit')}}">
              
               <p class="text-white ml-5">Women Enpt Edit</p>
             </a>
           </label>
           </li>
           <li>
-              <a href="/donateEdit">
+              <a href="{{route('donateEdit')}}">
                 <i class="now-ui-icons business_money-coins"></i>
                 <b>Donate Page</b>
               </a>
             </li>
           <li>
-              <a href="/contactPageEdit">
+              <a href="{{route('contactPageEdit')}}">
                 <i class="now-ui-icons ui-1_email-85"></i>
                 <b>Contact page</b>
               </a>
@@ -97,7 +97,7 @@
                 <h5>profiles</h5>      
               </li>
           <li>
-            <a href="/profiles">
+            <a href="{{route('profiles')}}">
               <i class="now-ui-icons users_single-02"></i>
               <b>Admin Profiles list</b>
             </a>
@@ -119,7 +119,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="http://127.0.0.1:8000/dashboard">Dashboard</a>
+            <a class="navbar-brand" href="{{route('dashboard')}}">Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>

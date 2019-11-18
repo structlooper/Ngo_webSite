@@ -52,41 +52,41 @@
                         <div class="navbar-collapse offset collapse " id="navbarSupportedContent" style="">
                             <ul class="nav navbar-nav menu_nav ml-auto">
                                 <li class="nav-item">
-                                  <a class="nav-link text-white" href="/">Home</a>
+                                  <a class="nav-link text-white" href="{{route('index')}} ">Home</a>
                                 </li> 
                                 <li class="nav-item submenu dropdown">
                                     <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/aboutus/who_we_are">Who we are?</a>
+                                            <a class="nav-link" href="{{route('who_we_are')}} ">Who we are?</a>
                                         </li>
                                         
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/aboutus/team">Team</a>
+                                            <a class="nav-link" href="{{route('team')}}">Team</a>
                                         </li>
                                        
                                     </ul>
                                 </li>
                                                                            
-                                <li class="nav-item"><a class="nav-link text-white" href="/events">Events</a></li>
+                                <li class="nav-item"><a class="nav-link text-white" href="{{route('events')}}">Events</a></li>
 
                                 <li class="nav-item submenu dropdown">
                                     <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Works</a>
                                     <ul class="dropdown-menu">
                                         
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/our_works/education">Education</a>
+                                            <a class="nav-link" href="{{route('education')}}">Education</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/our_works/health">Health</a> 
+                                            <a class="nav-link" href="{{route('health')}}">Health</a> 
                                         </li>
                                         <li class="nav-item">
-                                                <a class="nav-link" href="/our_works/WomenEnpowerment">Women Enpowerment</a> 
+                                                <a class="nav-link" href="{{route('WomenEnpowerment')}}">Women Enpowerment</a> 
                                         </li>
                                         
                                     </ul>
                                 </li>  
-                                <li class="nav-item"><a class="nav-link text-white" href="/contactUs">Contact us</a></li>
+                                <li class="nav-item"><a class="nav-link text-white" href="{{route('contactUs')}}">Contact us</a></li>
                                {{-- admin login and register portel --}}
                                         @guest
                                         <li class="nav-item border-left">
