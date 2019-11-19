@@ -32,7 +32,6 @@ Route::get('/our_works/education','OurWorkController@education')->name('educatio
 Route::get('/our_works/health','OurWorkController@health')->name('health');
 Route::get('/our_works/WomenEnpowerment','OurWorkController@women')->name('WomenEnpowerment');
 
-Auth::routes();
 
 
 Route::post('/donating', 'DonateController@store')->name('donating');
@@ -40,12 +39,16 @@ Route::post('/paytm-callback','DonateController@paytmCallback')->name('paytm-cal
 
 Route::post('/sendMail', 'MailController@send')->name('SendMail');
 
+Auth::routes();
+Auth::routes(['verify' => true]);
 Route::group(['middleware' => ['auth','Admin']], function () {
-    
+
 
     Route::any('/dashboard', 'DashboardController@index')->name("dashboard");
     Route::get('/profiles','DashboardController@profiles')->name("profiles");
-    
+    Route::get('/profilesEdit/{id}','DashboardController@profilesEdit')->name('profileEdit');
+    Route::put('profilesUpdate/{id}','DashboardController@profilesUpdate');
+    Route::delete('/profilesDelete/{id}', 'DashboardController@profileDelete');
 
     Route::get('/aboutusEdit','AboutEditWhoWeAreController@index')->name("aboutusEdit");
     Route::post('/aboutSave','AboutEditWhoWeAreController@store')->name('aboutSave');
