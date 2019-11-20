@@ -8,6 +8,12 @@
 @section('content')
      <div class="container">
                 <h1 class="display-4 border bg-secondary text-light pl-2">Main slide Details</h1>
+                @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                    @endif
                 <div class="container border rounded pt-2">
                     <form method="post"  action="{{ route('homeSlideSave')}}" enctype="multipart/form-data" >
                             @csrf
@@ -39,6 +45,12 @@
                 
                 <br><br>
                 <h1 class="display-4 border bg-secondary text-light pl-2">Details & side image</h1>
+                @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                    @endif
                 <div class="container border rounded pt-2">
                   <form method="post"  action="{{ route('homeAboutNgoDataSave')}}" enctype="multipart/form-data" >
                           @csrf
@@ -78,7 +90,14 @@
 
               <br><br>
               <h1 class="display-4 border bg-secondary text-light pl-2">Our works detail</h1>
+              
               <div class="container border rounded pt-2">
+                @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                    @endif
                 <form method="post"  action="{{ route('homeEducationSlideSave')}}" enctype="multipart/form-data" >
                         @csrf
                         <h2>Education Slide Details upload</h2>
@@ -114,8 +133,15 @@
                 </form>
             </div>
             <hr>
-              <div class="container border rounded pt-2">
-                <form method="post"  action="{{ route('homeHealthSlideSave')}}" enctype="multipart/form-data" >
+              
+            <div class="container border rounded pt-2">
+               @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                    @endif 
+              <form method="post"  action="{{ route('homeHealthSlideSave')}}" enctype="multipart/form-data" >
                         @csrf
                         <h2>Health Slide Details upload</h2>
                         <div class="col-sm-3 control-label border">
@@ -158,6 +184,12 @@
                 <form method="post"  action="{{ route('homeCretingImpactSave')}}" enctype="multipart/form-data" >
                         @csrf
                         <h2>spcific Details {Card fome} upload</h2>
+                        @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                    @endif
                         <div class="col-sm-3 control-label border">
                           <label for="">upload image</label>
                           <div class="col-sm-9 ml-2">

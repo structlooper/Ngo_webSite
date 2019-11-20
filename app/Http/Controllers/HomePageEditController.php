@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\homeSlide;
-use App\homeHealthSlide;
-use App\homeAboutNgoData;
-use App\homeCretingImpact;
-use App\homeEducationSide;
+use App\models\homeHealthSlide;
+use App\models\homeAboutNgoData;
+use App\models\homeSlide;
+use App\models\homeCretingImpact;
+use App\models\homeEducationSide;
 use Illuminate\Http\Request;
 
 class HomePageEditController extends Controller
@@ -34,7 +34,7 @@ class HomePageEditController extends Controller
            
         }
         $home_slide->save();
-        return redirect('/homepageEdit');
+        return redirect('/homepageEdit')->with('status', 'Details Uploaded successfuly');
         
     }
 
@@ -57,7 +57,7 @@ class HomePageEditController extends Controller
            
         }
         $home_about_ngo_data->save();
-        return redirect('/homepageEdit');
+        return redirect('/homepageEdit')->with('status', 'Details Uploaded successfuly');
         
     }
 
@@ -80,7 +80,7 @@ class HomePageEditController extends Controller
            
         }
         $home_education_slide->save();
-        return redirect('/homepageEdit');
+        return redirect('/homepageEdit')->with('status', 'Details Uploaded successfuly');
     }
 
     
@@ -102,7 +102,7 @@ class HomePageEditController extends Controller
            
         }
         $home_health_slide->save();
-        return redirect('/homepageEdit');
+        return redirect('/homepageEdit')->with('status', 'Details Uploaded successfuly');
     }
 
     
@@ -124,7 +124,7 @@ class HomePageEditController extends Controller
            
         }
         $home_creting_impact->save();
-        return redirect('/homepageEdit');
+        return redirect('/homepageEdit')->with('status', 'Details Uploaded successfuly');
 
     }
 

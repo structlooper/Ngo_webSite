@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 
-use App\AboutEditWhoWeAre;
 use Illuminate\Http\Request;
+use App\models\AboutEditWhoWeAre;
 
 class AboutEditWhoWeAreController extends Controller
 {
@@ -38,7 +38,7 @@ class AboutEditWhoWeAreController extends Controller
         
         $who_we_are->save();
 
-        return redirect('/aboutusEdit');
+        return redirect('/aboutusEdit')->with('status', 'Details Uploaded successfuly');
         
     }
     

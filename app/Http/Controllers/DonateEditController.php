@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\DonatePageData;
 use Illuminate\Http\Request;
+use App\models\DonatePageData;
 
 class DonateEditController extends Controller
 {
@@ -30,7 +30,7 @@ class DonateEditController extends Controller
                 $donate_page_data->image = '';
             }
             $donate_page_data->save();
-            return redirect('/donateEdit');
+            return redirect('/donateEdit')->with('status', 'Details Uploaded successfuly');
 
     }
 }

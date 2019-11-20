@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Donate;
+use App\models\Donate;
 use Illuminate\Http\Request;
 
 class DonateController extends Controller

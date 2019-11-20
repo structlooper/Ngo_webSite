@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\NgoContactDetails;
 use Illuminate\Http\Request;
+use App\models\NgoContactDetails;
 
 class ContactPageEditController extends Controller
 {
@@ -19,7 +19,7 @@ class ContactPageEditController extends Controller
         $ngo_contact_details->email = $request->input('email');
 
         $ngo_contact_details->save();
-        return \redirect('/contactPageEdit');
+        return \redirect('/contactPageEdit')->with('status', 'Details Uploaded successfuly');
 
     }
 }

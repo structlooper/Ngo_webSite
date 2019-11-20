@@ -8,6 +8,12 @@
 @section('content')
      <div class="container">
                 <h1 class="display-4 border bg-secondary text-light pl-2">Education Details Upload</h1>
+                @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                    @endif
                 <div class="container border rounded pt-2">
                     <form method="post"  action="{{ route('educationSlideSave')}}" enctype="multipart/form-data" >
                             @csrf
@@ -39,6 +45,12 @@
                 
                 <br><br>
                 <h1 class="display-4 border bg-secondary text-light pl-2">Details & side image</h1>
+                @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{session('status')}}
+                </div>
+                
+            @endif
                 <div class="container border rounded pt-2">
                   <form method="post"  action="{{ route('educationSideDataSave')}}" enctype="multipart/form-data" >
                           @csrf
@@ -78,6 +90,12 @@
 
               <br><br>
               <h1 class="display-4 border bg-secondary text-light pl-2">specific work details</h1>
+              @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                    @endif
               <div class="container border rounded pt-2">
                         <form method="post"  action="{{ route('educationSpecificWorkSave')}}" enctype="multipart/form-data" >
                                 @csrf

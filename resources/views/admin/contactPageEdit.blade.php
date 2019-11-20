@@ -8,6 +8,12 @@
 @section('content')
         <div class="Content">
                 <h1 class="display-4 border bg-secondary text-light pl-2">NGO Contact Details Upload</h1>
+                @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{session('status')}}
+                </div>
+                
+                @endif
                 <div class="container border rounded pt-2">
                   <form method="post"  action="{{ route('contactDetailsSave')}}" enctype="multipart/form-data" >
                           @csrf

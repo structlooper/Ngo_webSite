@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\homeSlide;
-use App\DonatePageData;
-use App\homeHealthSlide;
-use App\homeAboutNgoData;
-use App\homeCretingImpact;
-use App\homeEducationSide;
-use App\NgoContactDetails;
+use App\models\DonatePageData;
+use App\models\homeHealthSlide;
+use App\models\homeAboutNgoData;
+use App\models\homeSlide;
+use App\models\homeCretingImpact;
+use App\models\homeEducationSide;
+use App\models\NgoContactDetails;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller

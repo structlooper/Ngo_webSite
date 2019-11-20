@@ -8,6 +8,12 @@
 @section('content')
       <div class="container">
           <h1 class="display-4 border bg-secondary text-light pl-2">Who we are : {portion}</h1>
+          @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                    @endif
           <div class="container border rounded pt-2">
             <form method="post"  action="{{ route('aboutSave')}}" enctype="multipart/form-data" >
                     @csrf
@@ -33,9 +39,7 @@
                       <label for="">upload image</label>
                       <div class="col-sm-9 ml-2">
                         <input required type="file" name="image" />
-                        <label class="">Select a file to upload</label> <br>
-                        
-                            
+                        <label class="">Select a file to upload</label> <br>   
                       </div>
                     </div>
                     <div class="col-sm-12 padd">

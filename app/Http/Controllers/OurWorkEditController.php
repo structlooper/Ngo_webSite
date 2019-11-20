@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 
-use App\womenSlide;
-use App\healthSlide;
-use App\womenSideData;
-use App\educationSlide;
-use App\healthSideData;
-use App\educationSideData;
-use App\womenSpecificWork;
-use App\healthSpecificWork;
+use App\models\womenSlide;
+use App\models\healthSlide;
+use App\models\womenSideData;
+use App\models\healthSideData;
+use App\models\educationSideData;
+use App\models\womenSpecificWork;
+use App\models\healthSpecificWork;
 use Illuminate\Http\Request;
-use App\educationSpecificWork;
+use App\models\educationSpecificWork;
+use App\models\educationSlide;
 
 class OurWorkEditController extends Controller
 {
@@ -42,7 +42,7 @@ class OurWorkEditController extends Controller
             
             $education_slide->save();
             
-            return redirect('/ourWorksEducationEdit');
+            return redirect('/ourWorksEducationEdit')->with('status', 'Details Uploaded successfuly');
 
 
         }
@@ -69,7 +69,7 @@ class OurWorkEditController extends Controller
             
             $education_side_data->save();
             
-            return redirect('/ourWorksEducationEdit');
+            return redirect('/ourWorksEducationEdit')->with('status', 'Details Uploaded successfuly');
 
         
         }
@@ -95,7 +95,7 @@ class OurWorkEditController extends Controller
             
             $education_specific_work->save();
             
-            return redirect('/ourWorksEducationEdit');
+            return redirect('/ourWorksEducationEdit')->with('status', 'Details Uploaded successfuly');
 
 
 
@@ -131,7 +131,7 @@ class OurWorkEditController extends Controller
             
             $health_slide->save();
             
-            return redirect('/ourWorksHealthEdit');
+            return redirect('/ourWorksHealthEdit')->with('status', 'Details Uploaded successfuly');
         }
         function healthSideDataSave(request $request){
             $health_side_data_save = new healthSideData();
@@ -154,7 +154,7 @@ class OurWorkEditController extends Controller
             
             $health_side_data_save->save();
             
-            return redirect('/ourWorksHealthEdit');
+            return redirect('/ourWorksHealthEdit')->with('status', 'Details Uploaded successfuly');
         }
         function healthSpecificWorkSave(request $request){
 
@@ -176,7 +176,7 @@ class OurWorkEditController extends Controller
             
             $health_specific_work_save->save();
             
-            return redirect('/ourWorksHealthEdit');
+            return redirect('/ourWorksHealthEdit')->with('status', 'Details Uploaded successfuly');
         }
     
 
@@ -207,7 +207,7 @@ class OurWorkEditController extends Controller
             
             $women_slide->save();
             
-            return redirect('/ourWorksWomenEnpowermentEdit');
+            return redirect('/ourWorksWomenEnpowermentEdit')->with('status', 'Details Uploaded successfuly');
         }
         function womenSideDataSave(request $request){
             $women_side_data_save = new womenSideData();
@@ -230,7 +230,7 @@ class OurWorkEditController extends Controller
             
             $women_side_data_save->save();
             
-            return redirect('/ourWorksWomenEnpowermentEdit');
+            return redirect('/ourWorksWomenEnpowermentEdit')->with('status', 'Details Uploaded successfuly');
         }
         function womenSpecificWorkSave(request $request){
 
@@ -252,6 +252,6 @@ class OurWorkEditController extends Controller
             
             $women_specific_work_save->save();
             
-            return redirect('/ourWorksWomenEnpowermentEdit');
+            return redirect('/ourWorksWomenEnpowermentEdit')->with('status', 'Details Uploaded successfuly');
         }
 }

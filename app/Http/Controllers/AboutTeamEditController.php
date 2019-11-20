@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 
 
 
-use App\add_team_data;
+
+use App\models\add_team_data;
 use Illuminate\Http\Request;
-use App\about_team_slide_data;
+use App\models\about_team_slide_data;
 
 class AboutTeamEditController extends Controller
 {
@@ -40,7 +41,7 @@ class AboutTeamEditController extends Controller
         
         $about_team_side_data->save();
         
-        return redirect('/aboutusEditTeam');
+        return redirect('/aboutusEditTeam')->with('status', 'Details Uploaded successfuly');
         
         
     }
@@ -61,13 +62,12 @@ class AboutTeamEditController extends Controller
             $team_data->member_more_details = $request->input('member_more_details');
             $team_data->save();
             
-            return redirect('/aboutusEditTeam');
+            return redirect('/aboutusEditTeam')->with('status', 'Details Uploaded successfuly');
             
         }
         else {
             return $request;
-            $team_data->image = '';
-        }
+            }
         
         
         

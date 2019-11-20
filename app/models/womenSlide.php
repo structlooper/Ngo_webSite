@@ -1,11 +1,13 @@
 <?php
 
-namespace App;
+namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class educationSlide extends Model
+class womenSlide extends Model
 {
-    protected $table = 'education_slide';
+    protected $table = 'women_slide_save';
     protected $fillable = ['image','content'];
+
+
 }
