@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\womenSlide;
-use App\healthSlide;
-use App\womenSideData;
-use App\educationSlide;
-use App\healthSideData;
-use App\educationSideData;
-use App\womenSpecificWork;
-use App\healthSpecificWork;
+use App\models\womenSlide;
+use App\models\healthSlide;
+use App\models\womenSideData;
+use App\models\healthSideData;
+use App\models\educationSideData;
+use App\models\womenSpecificWork;
+use App\models\healthSpecificWork;
 use Illuminate\Http\Request;
-use App\educationSpecificWork;
+use App\models\educationSpecificWork;
+use App\models\educationSlide;
 
 class OurWorkController extends Controller
 {

@@ -1,11 +1,13 @@
 <?php
 
-namespace App;
+namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class homeHealthSlide extends Model
+class homeCretingImpact extends Model
 {
-    protected $table = 'home_health_slide';
+    protected $table = 'home_creting_impact';
+
     protected $fillable = ['image','heading','content'];
+
 }

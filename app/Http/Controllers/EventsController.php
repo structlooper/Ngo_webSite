@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\eventSlideData;
-use App\eventHistoryData;
-use App\eventUpcomingData;
 use Illuminate\Http\Request;
+use App\models\eventSlideData;
+use App\models\eventHistoryData;
+use App\models\eventUpcomingData;
 
 class EventsController extends Controller
 {

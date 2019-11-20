@@ -14,6 +14,12 @@
             <form method="post"  action="{{ route('SaveData')}}" enctype="multipart/form-data" >
                     @csrf
                     <h2>Slide Details upload</h2>
+                    @if (session('status'))
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        {{session('status')}}
+                    </div>
+                    @endif
+
                     <div class="col-sm-3 control-label border">
                       <label for="">upload image</label>
                       <div class="col-sm-9 ml-2">
@@ -43,6 +49,11 @@
             <form method="post"  action="{{ route('SaveDeaprtmentMember')}}" enctype="multipart/form-data" >
                     @csrf
                     <h2>Team Details</h2>
+                    @if (session('status'))
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        {{session('status')}}
+                    </div>
+                    @endif
                     <div class="col-sm-3 control-label border">
                       <label for="">upload image</label>
                       <div class="col-sm-9 ml-2">

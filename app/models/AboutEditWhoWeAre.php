@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class DonatePageData extends Model
+class AboutEditWhoweare extends Model
 {
-    protected $table = 'donate_page_data_save';
+    protected $table = 'about_who_we_ares';
     protected $fillable = ['heading','content','image'];
 }

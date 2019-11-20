@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\eventSlideData;
-use App\eventHistoryData;
-use App\eventUpcomingData;
+use App\models\eventHistoryData;
+use App\models\eventUpcomingData;
 use Illuminate\Http\Request;
+use App\models\eventSlideData;
 
 class EventsEditController extends Controller
 {
@@ -28,10 +28,9 @@ class EventsEditController extends Controller
             }
             else {
                 return $request;
-                $eventSlideData->image = '';
             }
             $eventSlideData->save();
-            return redirect('/eventsEdit');
+            return redirect('/eventsEdit')->with('status', 'Details Uploaded successfuly');
         }
 
         function eventUpcomingDataSave(request $request){
@@ -49,7 +48,7 @@ class EventsEditController extends Controller
                 $event_upcoming_data->duration_end = $request->input('duration_end') ? $request->duration_end : '';
                 $event_upcoming_data->save();
                 
-                return redirect('/eventsEdit');
+                return redirect('/eventsEdit')->with('status', 'Details Uploaded successfuly');
             }
             else{
                 return $request;
@@ -74,7 +73,7 @@ class EventsEditController extends Controller
                 $event_history_data->duration_end = $request->input('duration_end') ? $request->duration_end : '';
                 $event_history_data->save();
                 
-                return redirect('/eventsEdit');
+                return redirect('/eventsEdit')->with('status', 'Details Uploaded successfuly');
             }
             else{
                 return $request;

@@ -8,6 +8,12 @@
 @section('content')
      <div class="container">
                 <h1 class="display-4 border bg-secondary text-light pl-2">Current Events Detail Upload</h1>
+                @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                @endif
                 <div class="container border rounded pt-2">
                     <form method="post"  action="{{ route('eventSlideDataSave')}}" enctype="multipart/form-data" >
                             @csrf
@@ -36,7 +42,12 @@
                 </div>
                 <br><br>
                 <h1 class="display-4 border bg-secondary text-light pl-2">Upcoming Events Detail Upload</h1>            
-                
+                @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                @endif
                 <div class="container border rounded pt-2">
                   <form method="post"  action="{{ route('eventUpcomingDataSave')}}" enctype="multipart/form-data" >
                           @csrf
@@ -95,6 +106,12 @@
                   </form>
                 </div><br><br>
                 <h1 class="display-4 border bg-secondary text-light pl-2">Event History Details Upload</h1>            
+                @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('status')}}
+                        </div>
+                        
+                @endif
                 <div class="container border rounded pt-2">
                   <form method="post"  action="{{ route('eventHistoryDataSave')}}" enctype="multipart/form-data" >
                           @csrf

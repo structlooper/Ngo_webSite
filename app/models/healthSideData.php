@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AboutEditWhoweare extends Model
+class healthSideData extends Model
 {
-    protected $table = 'about_who_we_ares';
+    protected $table = 'health_side_data_save';
     protected $fillable = ['heading','content','image'];
 }
